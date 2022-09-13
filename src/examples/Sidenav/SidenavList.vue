@@ -17,6 +17,19 @@
       </li>
       <li class="nav-item">
         <sidenav-item
+            url="/dashboard1"
+            :class="getRoute() === 'dashboard1' ? 'active' : ''"
+            :navText="this.$store.state.isRTL ? 'الجداول' : 'Dashboard1'"
+        >
+          <template v-slot:icon>
+            <i
+                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+            ></i>
+          </template>
+        </sidenav-item>
+      </li>
+      <li class="nav-item">
+        <sidenav-item
           url="/tables"
           :class="getRoute() === 'tables' ? 'active' : ''"
           :navText="this.$store.state.isRTL ? 'الجداول' : 'Tables'"
@@ -114,17 +127,9 @@
       </li>
     </ul>
   </div>
-  <div class="pt-3 mx-3 mt-3 sidenav-footer">
-    <sidenav-card
-      :class="cardBg"
-      textPrimary="Need Help?"
-      textSecondary="Please check our docs"
-    />
-  </div>
 </template>
 <script>
 import SidenavItem from "./SidenavItem.vue";
-import SidenavCard from "./SidenavCard.vue";
 
 export default {
   name: "SidenavList",
@@ -140,7 +145,6 @@ export default {
   },
   components: {
     SidenavItem,
-    SidenavCard
   },
   methods: {
     getRoute() {

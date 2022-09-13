@@ -1,17 +1,3 @@
-<!--
-=========================================================
-* Vue Argon Dashboard 2 - v3.0.0
-=========================================================
-
-* Product Page: https://creative-tim.com/product/vue-argon-dashboard
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <template>
   <div
     v-show="this.$store.state.layout === 'landing'"
@@ -38,7 +24,6 @@ Coded by www.creative-tim.com
       v-if="this.$store.state.showNavbar"
     />
     <router-view />
-    <app-footer v-show="this.$store.state.showFooter" />
     <configurator
       :toggle="toggleConfigurator"
       :class="[
@@ -52,7 +37,6 @@ Coded by www.creative-tim.com
 import Sidenav from "./examples/Sidenav";
 import Configurator from "@/examples/Configurator.vue";
 import Navbar from "@/examples/Navbars/Navbar.vue";
-import AppFooter from "@/examples/Footer.vue";
 import { mapMutations } from "vuex";
 
 export default {
@@ -60,8 +44,7 @@ export default {
   components: {
     Sidenav,
     Configurator,
-    Navbar,
-    AppFooter
+    Navbar
   },
   methods: {
     ...mapMutations(["toggleConfigurator", "navbarMinimize"])
