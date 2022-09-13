@@ -25,7 +25,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "Sales overview",
+      default: "Riwayat Aktivitas",
     },
     detail1: {
       type: String,

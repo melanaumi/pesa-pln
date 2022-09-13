@@ -204,13 +204,53 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header pb-0">
-              <div class="d-flex align-items-center">
-<!--                <p class="mb-0">Edit Profile</p>-->
-                <span><i class="fas fa-user-circle"></i><i class="fas fa-user-circle"></i><i class="fas fa-user-circle"></i></span>
+              <div class="d-flex align-items-center justify-content-end">
+
+                <div class="ms-auto">
+                  <div class="avatar-group">
+                    <a
+                        href="javascript:;"
+                        class="border-0 avatar avatar-sm rounded-circle"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="2 New Messages"
+                    >
+                      <img alt="Image placeholder" src="@/assets/img/team-1.jpg" />
+                    </a>
+                    <a
+                        href="javascript:;"
+                        class="border-0 avatar avatar-sm rounded-circle"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="1 New Message"
+                    >
+                      <img alt="Image placeholder" src="@/assets/img/team-2.jpg" />
+                    </a>
+                    <a
+                        href="javascript:;"
+                        class="border-0 avatar avatar-sm rounded-circle"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="13 New Messages"
+                    >
+                      <img alt="Image placeholder" src="@/assets/img/team-3.jpg" />
+                    </a>
+                    <a
+                        href="javascript:;"
+                        class="border-0 avatar avatar-sm rounded-circle"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="7 New Messages"
+                    >
+                      <img alt="Image placeholder" src="@/assets/img/team-4.jpg" />
+                    </a>
+                  </div>
+                </div>
+
                 <argon-button color="success" size="sm" class="ms-auto"
-                  ><i class="fas fa-user"></i>&nbsp;&nbsp;Undang</argon-button
+                  ><img src="../assets/img/icons/user-plus.png" />&nbsp;&nbsp;Undang</argon-button
                 >
-                <i class="fas fa-star"></i>
+                <img src="../assets/img/icons/star3.png" />
                 <div
                     class="pe-md-3 d-flex align-items-center"
                     :class="this.$store.state.isRTL ? 'me-md-auto' : 'ms-md-auto'"
@@ -228,30 +268,23 @@
                     />
                   </div>
                 </div>
+                <img src="../assets/img/icons/Filter.png" />
+                <img src="../assets/img/icons/Sort.png" />
+                <img src="../assets/img/icons/Cho.png" />
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-3">
-          <div class="card">
-            <p class="mb-0">Edit Profile</p>
-          </div>
+          <billing-card />
         </div>
         <div class="col-md-3">
-          <div class="card">
-            <p class="mb-0">Edit Profile</p>
-          </div>
+          <billing-card />
         </div>
         <div class="col-md-3">
-          <div class="card">
-            <p class="mb-0">Edit Profile</p>
-          </div>
+          <billing-card />
         </div>
-        <div class="col-md-3">
-          <div class="card">
-            <p class="mb-0">Edit Profile</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </main>
@@ -261,6 +294,7 @@
 import setNavPills from "@/assets/js/nav-pills.js";
 import setTooltip from "@/assets/js/tooltip.js";
 import ArgonButton from "@/components/ArgonButton.vue";
+import BillingCard from "./components/BillingCard";
 
 const body = document.getElementsByTagName("body")[0];
 
@@ -271,7 +305,7 @@ export default {
       showMenu: false
     };
   },
-  components: { ArgonButton },
+  components: { ArgonButton, BillingCard },
 
   mounted() {
     this.$store.state.isAbsolute = true;
