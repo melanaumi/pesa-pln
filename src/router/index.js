@@ -7,6 +7,7 @@ import RTL from "../views/Rtl.vue";
 import Profile from "../views/Profile.vue";
 import Signup from "../views/Signup.vue";
 import Signin from "../views/Signin.vue";
+import Project from "../views/ProjectList.vue";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: "/dashboard-default",
     name: "Dashboard",
     component: Dashboard,
+  },
+  {
+    path: "/project",
+    name: "Project",
+    component: Project,
   },
   {
     path: "/tables",
