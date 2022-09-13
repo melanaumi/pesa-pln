@@ -30,6 +30,19 @@
       </li>
       <li class="nav-item">
         <sidenav-item
+            url="/project-board"
+            :class="getRoute() === 'project-board' ? 'active' : ''"
+            :navText="this.$store.state.isRTL ? 'الجداول' : 'ProjectBoard'"
+        >
+          <template v-slot:icon>
+            <i
+                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+            ></i>
+          </template>
+        </sidenav-item>
+      </li>
+      <li class="nav-item">
+        <sidenav-item
           url="/tables"
           :class="getRoute() === 'tables' ? 'active' : ''"
           :navText="this.$store.state.isRTL ? 'الجداول' : 'Tables'"

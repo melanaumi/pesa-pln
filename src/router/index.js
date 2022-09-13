@@ -6,6 +6,7 @@ import Billing from "../views/Billing.vue";
 import VirtualReality from "../views/VirtualReality.vue";
 import RTL from "../views/Rtl.vue";
 import Profile from "../views/Profile.vue";
+import ProjectBoard from "../views/ProjectBoard.vue";
 import Signup from "../views/Signup.vue";
 import Signin from "../views/Signin.vue";
 
@@ -24,6 +25,11 @@ const routes = [
     path: "/dashboard1",
     name: "Dashboard1",
     component: Dashboard1,
+  },
+  {
+    path: "/project-board",
+    name: "Project Board",
+    component: ProjectBoard,
   },
   {
     path: "/tables",
