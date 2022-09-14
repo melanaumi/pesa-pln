@@ -28,8 +28,8 @@ const routes = [
     component: Project,
   },
   {
-    path: "/dashboard1",
-    name: "Dashboard1",
+    path: "/dashboard",
+    name: "Dashboard",
     component: Dashboard1,
   },
   {

@@ -3,23 +3,16 @@
     <ul class="navbar-nav">
       <li class="nav-item">
         <sidenav-item
-          url="/dashboard-default"
-          :class="getRoute() === 'dashboard-default' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'لوحة القيادة' : 'Dashboard'"
+          url="/dashboard"
+          :class="getRoute() === 'dashboard' ? 'active' : ''"
+          :navText="'Dashboard'"
         >
           <template v-slot:icon>
-            <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
-          </template>
-        </sidenav-item>
-      </li>
-      <li class="nav-item">
-        <sidenav-item
-          url="/dashboard1"
-          :class="getRoute() === 'dashboard1' ? 'active' : ''"
-          :navText="this.$store.state.isRTL ? 'الجداول' : 'Dashboard1'"
-        >
-          <template v-slot:icon>
-            <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
+            <img
+              src="../../../src/assets/img/logo-dashboard.png"
+              alt="logo dashboard"
+              class="sizeLogo"
+            />
           </template>
         </sidenav-item>
       </li>
@@ -28,6 +21,21 @@
           url="/project"
           :class="getRoute() === 'project' ? 'active' : ''"
           :navText="'Project'"
+        >
+          <template v-slot:icon>
+            <img
+              src="../../../src/assets/img/logo-project.png"
+              alt="logo project"
+              class="sizeLogo"
+            />
+          </template>
+        </sidenav-item>
+      </li>
+      <!-- <li class="nav-item">
+        <sidenav-item
+          url="/dashboard-default"
+          :class="getRoute() === 'dashboard-default' ? 'active' : ''"
+          :navText="this.$store.state.isRTL ? 'لوحة القيادة' : 'Dashboard'"
         >
           <template v-slot:icon>
             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
@@ -135,7 +143,7 @@
             <i class="ni ni-collection text-info text-sm opacity-10"></i>
           </template>
         </sidenav-item>
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>
@@ -165,3 +173,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+.sizeLogo {
+  width: 170%;
+}
+</style>

@@ -1,9 +1,9 @@
 <template>
   <div class="mb-4 card roundedCustom">
-    <div class="p-3 card-body">
-      <div class="d-flex">
+    <div class="p-1 card-body">
+      <div class="d-flex align-items-center position-relative">
         <!-- inisial name Project -->
-        <p class="bg-primary rounded-2 text-white fs-4 p-2">UU</p>
+        <p class="bg-primary rounded-2 text-white fs-4 p-2 mt-3 ms-2">UU</p>
         <div>
           <!-- title -->
           <h6 class="font-weight-bolder ms-3" :class="valueColor">{{ value }}</h6>
@@ -16,6 +16,10 @@
             <p class="m-0 text-center fw-bold">{{detail}}</p>
           </div>
         </div>
+        <div class="position-absolute right">
+          <!-- <img :src="getImgUrl(iconClass)" /> -->
+          <img src="../../assets/img/icons/star3.png" />
+        </div>
       </div>
     </div>
   </div>
@@ -27,6 +31,11 @@ export default {
   data() {
     return {
     };
+  },
+  methods: {
+    getImgUrl: function (img) { 
+      return require('@/assets/img/icons/' + img);
+    }
   },
   props: {
     directionReverse: Boolean,
@@ -51,17 +60,6 @@ export default {
     iconClass: {
       type: String,
       required: true,
-    },
-    percentageColor: {
-      type: String,
-      default: "text-success",
-    },
-    iconBackground: {
-      type: String,
-      default: "bg-white",
-    },
-    contentClass: {
-      type: String,
     },
   },
 };
@@ -88,6 +86,9 @@ export default {
 }
 .roundedCustom:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+.right {
+  right: 10px;
 }
 /* element style*/
 p {

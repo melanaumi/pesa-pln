@@ -25,7 +25,9 @@
               data-bs-target="#myModal"
               data-bs-toggle="modal"
               class="btn btn-primary"
-            >Tambah Project</button>
+            >
+              <i class="fas fa-plus me-2"></i>Tambah Project
+            </button>
             <div class="modal" id="myModal">
               <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
@@ -66,8 +68,11 @@
                       <!-- select tipe project -->
                       <div class="mb-3">
                         <label for="floatingTextarea2">Tipe project</label>
-                        <select class="form-select" aria-label="Default select example">
-                          <option selected>Pilih tipe project</option>
+                        <select
+                          class="form-select"
+                          placeholder="Pilih tipe project"
+                          aria-label="Default select example"
+                        >
                           <option value="1">KPI</option>
                           <option value="2">Tupoksi</option>
                           <option value="3">Lainnya</option>
@@ -76,6 +81,7 @@
                       <div class="mb-3">
                         <label for="floatingTextarea2">Warna</label>
                       </div>
+                      <p>Dengan membuat project, tim dan atasan anda akan automatis terundang ke dalam project.</p>
                     </form>
                   </div>
                   <div class="modal-footer">
@@ -125,92 +131,80 @@ export default {
         stateFavorit: [
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "star3.png",
           detail: "Lainnya",
-          iconBackground: "bg-gradient-primary",
         },
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "Tupoksi",
-          iconBackground: "bg-gradient-primary",
         },
         ],
         stateSemuaProject: [
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "KPI",
-          iconBackground: "bg-gradient-primary",
         },
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "KPI",
-          iconBackground: "bg-gradient-primary",
         },
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "KPI",
-          iconBackground: "bg-gradient-primary",
         },
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "Lainnya",
-          iconBackground: "bg-gradient-primary",
         },
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "Lainnya",
-          iconBackground: "bg-gradient-primary",
         },
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "Lainnya",
-          iconBackground: "bg-gradient-primary",
         },
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "Tupoksi",
-          iconBackground: "bg-gradient-primary",
         },
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "Tupoksi",
-          iconBackground: "bg-gradient-primary",
         },
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "Tupoksi",
-          iconBackground: "bg-gradient-primary",
         },
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "Lainnya",
-          iconBackground: "bg-gradient-primary",
         },
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "Lainnya",
-          iconBackground: "bg-gradient-primary",
         },
         {
           title: "UX UI design",
-          iconClass: "ni ni-money-coins",
+          iconClass: "",
           detail: "Lainnya",
-          iconBackground: "bg-gradient-primary",
         },
         ]
     };
   },
 };
 </script>
+<style scoped>
+</style>
