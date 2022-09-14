@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Dashboard from "../views/Dashboard.vue";
+import Dashboard1 from "../views/Dashboard1.vue";
 import Tables from "../views/Tables.vue";
 import Billing from "../views/Billing.vue";
 import VirtualReality from "../views/VirtualReality.vue";
 import RTL from "../views/Rtl.vue";
 import Profile from "../views/Profile.vue";
+import ProjectBoard from "../views/ProjectBoard.vue";
 import Signup from "../views/Signup.vue";
 import Signin from "../views/Signin.vue";
 import Project from "../views/ProjectList.vue";
@@ -22,8 +24,18 @@ const routes = [
   },
   {
     path: "/project",
-    name: "Project",
+    name: "project",
     component: Project,
+  },
+  {
+    path: "/dashboard1",
+    name: "Dashboard1",
+    component: Dashboard1,
+  },
+  {
+    path: "/project-board",
+    name: "Project Board",
+    component: ProjectBoard,
   },
   {
     path: "/tables",
