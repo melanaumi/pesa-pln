@@ -13,7 +13,6 @@
             <card
               :value="stateFavorits.title"
               :iconClass="stateFavorits.iconClass"
-              :iconBackground="stateFavorits.iconBackground"
               :detail="stateFavorits.detail"
             ></card>
           </div>
@@ -87,36 +86,73 @@
                             :key="index"
                           >
                             <div
-                              class="p-4 d-inline-block rounded-circle me-2"
-                              :style="{backgroundColor: selectColors, cursor: pointer}"
-                            ></div>
+                              v-if="selectColors !== '#DDDDDD'"
+                              @click="getColorValue(selectColors)"
+                              class="p-4 d-inline-block rounded-circle me-2 roundedCustom position-relative"
+                              :style="{backgroundColor: selectColors}"
+                            >
+                              <img
+                                v-if="colorValue === selectColors"
+                                class="position-absolute centered"
+                                src="../assets/img/icons/check.png"
+                                alt="icon checklist"
+                              />
+                            </div>
+                            <div
+                              v-else
+                              @click="moreColor = !moreColor"
+                              class="p-4 d-inline-block rounded-circle me-2 roundedCustom position-relative"
+                              :style="{backgroundColor: selectColors, display: moreColor === false ? 'flex' : 'none'}"
+                            >
+                              <img
+                                class="position-absolute centered"
+                                src="../assets/img/icons/moreIcon.png"
+                                alt="icon more"
+                              />
+                            </div>
                           </div>
                         </div>
                         <!-- jika true tampil jika false display none -->
                         <!-- opacity warna  1 -->
-                        <div class="row w-70">
+                        <div class="row w-70" v-if="moreColor">
                           <div
                             class="col-lg-2"
                             v-for="(selectColorsOpacitys1, index) in selectColorOpacity1"
                             :key="index"
                           >
                             <div
-                              class="p-4 d-inline-block rounded-circle me-2"
-                              :style="{backgroundColor: selectColorsOpacitys1, cursor: pointer}"
-                            ></div>
+                              @click="getColorValue(selectColorsOpacitys1)"
+                              class="p-4 d-inline-block rounded-circle me-2 roundedCustom position-relative"
+                              :style="{backgroundColor: selectColorsOpacitys1, display: moreColor === true ? 'flex' : 'none'}"
+                            >
+                              <img
+                                v-if="colorValue === selectColorsOpacitys1"
+                                class="position-absolute centered"
+                                src="../assets/img/icons/check.png"
+                                alt="icon checklist"
+                              />
+                            </div>
                           </div>
                         </div>
                         <!-- opacity warna 2 -->
-                        <div class="row w-70">
+                        <div class="row w-70" v-if="moreColor">
                           <div
                             class="col-lg-2"
                             v-for="(selectColorsOpacitys2, index) in selectColorOpacity2"
                             :key="index"
                           >
                             <div
-                              class="p-4 d-inline-block rounded-circle me-2"
-                              :style="{backgroundColor: selectColorsOpacitys2, cursor: pointer}"
-                            ></div>
+                              @click="getColorValue(selectColorsOpacitys2)"
+                              class="p-4 d-inline-block rounded-circle me-2 roundedCustom position-relative"
+                              :style="{backgroundColor: selectColorsOpacitys2, cursor: pointer, display: moreColor === true ? 'flex' : 'none'}"
+                            >
+                              <img
+                                v-if="colorValue === selectColorsOpacitys2"
+                                class="position-absolute centered"
+                                src="../assets/img/icons/check.png"
+                                alt="icon checklist"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -143,9 +179,7 @@
             <card
               :value="stateSemuaProjects.title"
               :iconClass="stateSemuaProjects.iconClass"
-              :iconBackground="stateSemuaProjects.iconBackground"
               :detail="stateSemuaProjects.detail"
-              directionReverse
             ></card>
           </div>
         </div>
@@ -167,12 +201,15 @@ export default {
   },
   data() {
     return {
+        moreColor: false,
+        colorValue: "",
         selectColor: [
           "#00A2B9",
           "#36B37E",
           "#F3AF00",
           "#DE350B",
-          "#7039CB"
+          "#7039CB",
+          "#DDDDDD"
         ],
         selectColorOpacity1: [
           "#66C7D5",
@@ -191,7 +228,7 @@ export default {
         stateFavorit: [
         {
           title: "UX UI design",
-          iconClass: "star3.png",
+          iconClass: "star1.png",
           detail: "Lainnya",
         },
         {
@@ -264,7 +301,27 @@ export default {
         ]
     };
   },
+  methods: {
+    getColorValue(value) {
+      this.colorValue = value;
+      console.log("color value = ",this.colorValue);
+    }
+  }
 };
 </script>
 <style scoped>
+.centered {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.roundedCustom {
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+.roundedCustom:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.3);
+}
 </style>

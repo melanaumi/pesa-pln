@@ -17,8 +17,8 @@
           </div>
         </div>
         <div class="position-absolute right">
-          <!-- <img :src="getImgUrl(iconClass)" /> -->
-          <img src="../../assets/img/icons/star3.png" />
+          <!-- <img v-bind:src="getImgUrl(iconClass)" /> -->
+          <img src="../../assets/img/icons/star2.png" />
         </div>
       </div>
     </div>
@@ -33,19 +33,14 @@ export default {
     };
   },
   methods: {
-    getImgUrl: function (img) { 
-      return require('@/assets/img/icons/' + img);
+    getImgUrl(img) { 
+      return '@/assets/img/icons/' + img
     },
-    urlParams: function () {
+    urlParams() {
       this.$router.push({ name: "Project Board" });
     }
   },
   props: {
-    directionReverse: Boolean,
-    title: {
-      type: String,
-      required: true,
-    },
     detail: {
       type: String,
       required: true,
@@ -53,13 +48,12 @@ export default {
     titleColor: {
       type: String,
     },
-    value: {
-      required: true,
-    },
     valueColor: {
       type: String,
     },
-    percentage: String,
+    value:{
+      type: String,
+    },
     iconClass: {
       type: String,
       required: true,
