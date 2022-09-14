@@ -14,7 +14,7 @@
 
         <div class="justify-content-center mt-5">
           <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
-            <div class="card border-radius-lg">
+            <div class="card">
               <div class="card-header text-center pt-4">
                 <h5>Selamat Datang di <br> PLN Employee Super App</h5>
                 <p

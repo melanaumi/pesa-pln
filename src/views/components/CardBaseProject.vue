@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-4 card roundedCustom">
+  <div class="mb-4 card roundedCustom" @click="urlParams()">
     <div class="p-1 card-body">
       <div class="d-flex align-items-center position-relative">
         <!-- inisial name Project -->
@@ -35,6 +35,9 @@ export default {
   methods: {
     getImgUrl: function (img) { 
       return require('@/assets/img/icons/' + img);
+    },
+    urlParams: function () {
+      this.$router.push({ name: "Project Board" });
     }
   },
   props: {

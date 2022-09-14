@@ -2,14 +2,14 @@
   <main>
     <div class="container-fluid">
       <div
-        class="page-header min-height-300"
+        class="page-header min-height-150"
         style="
-          background-image: url('https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+          background-color: #00a5bb;
           margin-right: -24px;
           margin-left: -34%;
         "
       >
-        <span class="mask bg-gradient-success opacity-6"></span>
+        <span class="mask opacity-6"></span>
       </div>
       <div class="card shadow-lg mt-n6">
         <div class="card-body p-3">
@@ -200,12 +200,10 @@
       </div>
     </div>
     <div class="py-4 container-fluid">
-      <div class="row">
-        <div class="col-md-12">
+
           <div class="card">
             <div class="card-header pb-0">
               <div class="d-flex align-items-center justify-content-end">
-
                 <div style="margin: 10px;">
                   <div class="avatar-group">
                     <a
@@ -280,20 +278,23 @@
                   <img src="../assets/img/icons/Cho.png" />
                 </div>
               </div>
+              <div class="row mt-3">
+                <div class="col-md-3">
+                  <billing-card />
+                </div>
+                <div class="col-md-3">
+                  <billing-card />
+                </div>
+                <div class="col-md-3">
+                  <billing-card />
+                </div>
+                <div class="col-md-3">
+                  <SwitchCard></SwitchCard>
+                </div>
+              </div>
+
             </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <billing-card />
-        </div>
-        <div class="col-md-3">
-          <billing-card />
-        </div>
-        <div class="col-md-3">
-          <billing-card />
-        </div>
-
-      </div>
     </div>
   </main>
 </template>
@@ -303,6 +304,7 @@ import setNavPills from "@/assets/js/nav-pills.js";
 import setTooltip from "@/assets/js/tooltip.js";
 import ArgonButton from "@/components/ArgonButton.vue";
 import BillingCard from "./components/BillingCard";
+import SwitchCard from "../examples/Cards/SwitchCard";
 
 const body = document.getElementsByTagName("body")[0];
 
@@ -313,7 +315,7 @@ export default {
       showMenu: false
     };
   },
-  components: { ArgonButton, BillingCard },
+  components: {SwitchCard, ArgonButton, BillingCard },
 
   mounted() {
     this.$store.state.isAbsolute = true;
