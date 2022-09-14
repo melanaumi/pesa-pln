@@ -80,6 +80,45 @@
                       </div>
                       <div class="mb-3">
                         <label for="floatingTextarea2">Warna</label>
+                        <div class="row w-70">
+                          <div
+                            class="col-lg-2"
+                            v-for="(selectColors, index) in selectColor"
+                            :key="index"
+                          >
+                            <div
+                              class="p-4 d-inline-block rounded-circle me-2"
+                              :style="{backgroundColor: selectColors, cursor: pointer}"
+                            ></div>
+                          </div>
+                        </div>
+                        <!-- jika true tampil jika false display none -->
+                        <!-- opacity warna  1 -->
+                        <div class="row w-70">
+                          <div
+                            class="col-lg-2"
+                            v-for="(selectColorsOpacitys1, index) in selectColorOpacity1"
+                            :key="index"
+                          >
+                            <div
+                              class="p-4 d-inline-block rounded-circle me-2"
+                              :style="{backgroundColor: selectColorsOpacitys1, cursor: pointer}"
+                            ></div>
+                          </div>
+                        </div>
+                        <!-- opacity warna 2 -->
+                        <div class="row w-70">
+                          <div
+                            class="col-lg-2"
+                            v-for="(selectColorsOpacitys2, index) in selectColorOpacity2"
+                            :key="index"
+                          >
+                            <div
+                              class="p-4 d-inline-block rounded-circle me-2"
+                              :style="{backgroundColor: selectColorsOpacitys2, cursor: pointer}"
+                            ></div>
+                          </div>
+                        </div>
                       </div>
                       <p>Dengan membuat project, tim dan atasan anda akan automatis terundang ke dalam project.</p>
                     </form>
@@ -128,6 +167,27 @@ export default {
   },
   data() {
     return {
+        selectColor: [
+          "#00A2B9",
+          "#36B37E",
+          "#F3AF00",
+          "#DE350B",
+          "#7039CB"
+        ],
+        selectColorOpacity1: [
+          "#66C7D5",
+          "#86D1B2",
+          "#F8CF66",
+          "#EB866D",
+          "#A988E0"
+        ],
+        selectColorOpacity2: [
+          "#B3E4EA",
+          "#C3E9D9",
+          "#FCE8B3",
+          "#F6C3B6",
+          "#D5C4F0"
+        ],
         stateFavorit: [
         {
           title: "UX UI design",
