@@ -206,7 +206,7 @@
             <div class="card-header pb-0">
               <div class="d-flex align-items-center justify-content-end">
 
-                <div class="ms-auto">
+                <div style="margin: 10px;">
                   <div class="avatar-group">
                     <a
                         href="javascript:;"
@@ -246,31 +246,39 @@
                     </a>
                   </div>
                 </div>
-
-                <argon-button color="success" size="sm" class="ms-auto"
+                <div style="margin: 10px;">
+                  <argon-button color="success" size="sm"
                   ><img src="../assets/img/icons/user-plus.png" />&nbsp;&nbsp;Undang</argon-button
-                >
-                <img src="../assets/img/icons/star3.png" />
+                  >
+                </div>
+                <div style="margin: 10px;">
+                  <img src="../assets/img/icons/star3.png" />
+                </div>
                 <div
-                    class="pe-md-3 d-flex align-items-center"
-                    :class="this.$store.state.isRTL ? 'me-md-auto' : 'ms-md-auto'"
+                    class="pe-md-3 d-flex align-items-center" style="margin: 10px;"
                 >
                   <div class="input-group">
                     <span class="input-group-text text-body">
                       <i class="fas fa-search" aria-hidden="true"></i>
                     </span>
-                            <input
-                                type="text"
-                                class="form-control"
-                                :placeholder="
+                    <input
+                        type="text"
+                        class="form-control"
+                        :placeholder="
                         this.$store.state.isRTL ? 'أكتب هنا...' : 'Type here...'
                       "
                     />
                   </div>
                 </div>
-                <img src="../assets/img/icons/Filter.png" />
-                <img src="../assets/img/icons/Sort.png" />
-                <img src="../assets/img/icons/Cho.png" />
+                <div style="margin: 10px;">
+                  <img src="../assets/img/icons/Filter.png" />
+                </div>
+                <div style="margin: 10px;">
+                  <img src="../assets/img/icons/Sort.png" />
+                </div>
+                <div style="margin: 10px;">
+                  <img src="../assets/img/icons/Cho.png" />
+                </div>
               </div>
             </div>
           </div>
