@@ -15,7 +15,7 @@
         <div class="card-body p-3">
           <div class="row gx-4">
             <div class="col-auto">
-              <div class="avatar avatar-xl position-relative">
+              <div class="avatar avatar-xl avatar-size-50 position-relative">
                 <img
                   src="../assets/img/team-1.jpg"
                   alt="profile_image"
