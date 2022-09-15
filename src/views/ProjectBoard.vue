@@ -163,34 +163,68 @@
               <button
                   className="border-0 rounded-circle bg-white"
                   type="button"
-                  id="dropdownMenuButton1"
+                  id="dropdownAktivitas"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
               >
                 <img className="w-100" src="../assets/img/icons/Cho.png"/>
               </button>
-              <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1" role="menu">
-                <div className="p-2 d-flex">
-                  <a className="dropdown-item" href="/data">
-                    <img
-                        style="margin-right: 13px;"
-                        src="../assets/img/icons/aktivitas_dropdown.png"
-                    />Activitas
-                  </a>
-                </div>
-                <div className="p-2 d-flex">
-                  <a className="dropdown-item" href="#">
-                    <img style="margin-right: 10px;" src="../assets/img/icons/deleteIcon.png"/>Keluar dari project
-                  </a>
-                </div>
-                <div className="p-2 d-flex">
-                  <a className="dropdown-item" href="#">
-                    <img style="margin-right: 10px;" src="../assets/img/icons/deleteIcon.png"/>Hapus project
-                  </a>
-                </div>
+              <ul className="dropdown-menu" aria-labelledby="dropdownAktivitas" role="menu">
+                <button
+                    class="p-1 d-flex align-items-center dropdown-item"
+                    @click="openSideBarRiwayatAktifitas()"
+                >
+                  <div class="position-absolute mx-1">
+                    <img style src="../assets/img/icons/aktivitas_dropdown.png" />
+                  </div>
+                  <div class="mx-3">
+                    <button type="button" class="dropdown-item">Aktivitas</button>
+                  </div>
+                </button>
+                <button
+                    class="p-1 d-flex align-items-center dropdown-item"
+                    data-bs-target="#myModalLogoutProject"
+                    data-bs-toggle="modal"
+                >
+                  <div class="position-absolute">
+                    <img style src="../assets/img/icons/bx_log-in.png" />
+                  </div>
+                  <div class="mx-3">
+                    <button
+                        type="button"
+                        data-bs-target="#myModalLogoutProject"
+                        data-bs-toggle="modal"
+                        class="dropdown-item"
+                    >Keluar dari project</button>
+                  </div>
+                </button>
+                <button
+                    class="p-1 d-flex align-items-center dropdown-item"
+                    data-bs-target="#myModalDeleteProject"
+                    data-bs-toggle="modal"
+                >
+                  <div class="position-absolute" style="margin-left: 2px;">
+                    <img style src="../assets/img/icons/deleteIcon.png" />
+                  </div>
+                  <div class="mx-3">
+                    <button
+                        type="button"
+                        data-bs-target="#myModalDeleteProject"
+                        data-bs-toggle="modal"
+                        class="dropdown-item"
+                    >Hapus project</button>
+                  </div>
+                </button>
               </ul>
             </div>
           </div>
+
+          <!-- modal logout project -->
+          <modalLogoutProject />
+          <!-- modal delete project -->
+          <modalDeleteProject />
+          <!-- modal undang member -->
+          <modalUndangMember />
 
           <div className="row mt-3">
             <div className="col-md-3">
@@ -307,6 +341,9 @@ import setTooltip from "@/assets/js/tooltip.js";
 import ArgonButton from "@/components/ArgonButton.vue";
 import BillingCard from "./components/BillingCard";
 import ArgonRadio from "../components/ArgonRadio";
+import modalLogoutProject from "@/views/components/modalLogoutProject.vue";
+import modalDeleteProject from "@/views/components/modalDeleteProject.vue";
+import modalUndangMember from "@/views/components/modalUndangMember.vue";
 
 const body = document.getElementsByTagName("body")[0];
 
@@ -317,7 +354,12 @@ export default {
       showMenu: false
     };
   },
-  components: {ArgonRadio, ArgonButton, BillingCard},
+  components: {ArgonButton, ArgonRadio, BillingCard, modalLogoutProject, modalDeleteProject, modalUndangMember},
+  methods: {
+    openSideBarRiwayatAktifitas()  {
+      alert('open to sidebar riwayat aktivitas');
+    }
+  },
 
   mounted() {
     this.$store.state.isAbsolute = true;
