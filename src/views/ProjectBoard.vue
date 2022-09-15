@@ -47,41 +47,45 @@
                     className="border-0 avatar avatar-sm rounded-circle"
                     data-bs-toggle="tooltip"
                     data-bs-placement="top"
-                    title="2 New Messages"
+                    title="UI UX Design"
+                    style="background-color: #00A2B9; font-weight: bold;"
                 >
-                  <img alt="Image placeholder" src="@/assets/img/team-1.jpg"/>
+                  UU
                 </a>
                 <a
                     href="javascript:;"
                     className="border-0 avatar avatar-sm rounded-circle"
                     data-bs-toggle="tooltip"
                     data-bs-placement="top"
-                    title="1 New Message"
+                    title="Final Desain"
+                    style="background-color: #bc6060; font-weight: bold;"
                 >
-                  <img alt="Image placeholder" src="@/assets/img/team-2.jpg"/>
+                  UX
                 </a>
                 <a
                     href="javascript:;"
                     className="border-0 avatar avatar-sm rounded-circle"
                     data-bs-toggle="tooltip"
                     data-bs-placement="top"
-                    title="13 New Messages"
+                    title="Task Design"
+                    style="background-color: #7928CA; font-weight: bold;"
                 >
-                  <img alt="Image placeholder" src="@/assets/img/team-3.jpg"/>
+                  FG
                 </a>
                 <a
                     href="javascript:;"
                     className="border-0 avatar avatar-sm rounded-circle"
                     data-bs-toggle="tooltip"
                     data-bs-placement="top"
-                    title="7 New Messages"
+                    title="16 More"
+                    style="background-color: #6c757d; font-weight: bold;"
                 >
-                  <img alt="Image placeholder" src="@/assets/img/team-4.jpg"/>
+                  16 ++
                 </a>
               </div>
             </div>
             <div style="margin: 10px;">
-              <argon-button color="success" size="sm"
+              <argon-button color="info" size="sm"
               ><img src="../assets/img/icons/user-plus.png"/>&nbsp;&nbsp;Undang
               </argon-button
               >
@@ -100,17 +104,60 @@
                     type="text"
                     className="form-control"
                     :placeholder="
-                        this.$store.state.isRTL ? 'أكتب هنا...' : 'Cari Task ...'
+                        this.$store.state.isRTL ? 'Cari Task ...' : 'Cari Task ...'
                       "
                 />
               </div>
             </div>
-            <div style="margin: 10px;">
-              <img src="../assets/img/icons/Filter.png"/>
+            <!-- dropdown filter -->
+            <div style="margin-top: 1px;">
+              <button
+                  className="border-0 rounded-circle bg-white"
+                  type="button"
+                  id="dropdownMenuButton2"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+              >
+                <img className="w-100" src="../assets/img/icons/Filter.png"/>
+              </button>
+              <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton2" role="menu">
+                <div className="p-2 d-flex">
+                  <a className="dropdown-item" href="/data">
+                    <ArgonRadio style="margin-right: 10px;">Batas Waktu</ArgonRadio>
+                  </a>
+                </div>
+                <div className="p-2 d-flex">
+                  <a className="dropdown-item" href="/data">
+                    <ArgonRadio style="margin-right: 10px;">Prioritas Tertinggi</ArgonRadio>
+                  </a>
+                </div>
+                <div className="p-2 d-flex">
+                  <a className="dropdown-item" href="/data">
+                    <ArgonRadio style="margin-right: 10px;">Prioritas Terendah</ArgonRadio>
+                  </a>
+                </div>
+                <div className="p-2 d-flex">
+                  <a className="dropdown-item" href="/data">
+                    <ArgonRadio style="margin-right: 10px;">Paling Baru</ArgonRadio>
+                  </a>
+                </div>
+                <div className="p-2 d-flex">
+                  <a className="dropdown-item" href="/data">
+                    <ArgonRadio style="margin-right: 10px;">Paling Lama</ArgonRadio>
+                  </a>
+                </div>
+                <div className="p-2 d-flex">
+                  <a className="dropdown-item" href="/data">
+                    <ArgonRadio style="margin-right: 10px;">Nama Task (A - Z)</ArgonRadio>
+                  </a>
+                </div>
+              </ul>
             </div>
+
             <div style="margin: 10px;">
               <img src="../assets/img/icons/Sort.png"/>
             </div>
+
             <!-- dropdown aktivitas dan delete project -->
             <div style="margin-top: 1px;">
               <button
@@ -156,7 +203,95 @@
               <billing-card/>
             </div>
             <div className="col-md-3">
-              <DashCard></DashCard>
+              <div class="card" style="background-color: #FFFFFF; border: 1px dashed; border-color: green;">
+                <div class="card-body">
+                  <div class="mb-0 d-flex justify-content-center text-black">
+                    <a
+                        className="dropdown-item"
+                        href="/data"
+                        data-bs-target="#modal-status"
+                        data-bs-toggle="modal"
+                    > <span style="color: #00A2B9; font-weight: bolder; font-size: x-large;">+</span> &nbsp;&nbsp;Tambah Status</a>
+                  </div>
+                  <div class="modal" id="modal-status">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <!-- modal header -->
+                        <div class="modal-header">
+                          <h5 class="modal-title">Buat Status</h5>
+                          <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                          ></button>
+                        </div>
+                        <!-- modal body -->
+                        <div class="modal-body">
+                          <form>
+                            <!-- nama project -->
+                            <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Nama Status</label>
+                              <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Bisa berupa nama tim, tujuan proyek, atau lainnya"
+                                  id="exampleInputEmail1"
+                                  aria-describedby="emailHelp"
+                              />
+                            </div>
+
+                            <div class="mb-3">
+                              <label>Warna</label>
+                              <div class="row w-70">
+                                <div
+                                    class="col-lg-2"
+                                    v-for="(selectColors, index) in selectColor"
+                                    :key="index"
+                                >
+                                  <div
+                                      v-if="selectColors !== '#DDDDDD'"
+                                      @click="getColorValue(selectColors)"
+                                      class="p-4 d-inline-block rounded-circle me-2 roundedCustom position-relative"
+                                      :style="{backgroundColor: selectColors}"
+                                  >
+                                    <img
+                                        v-if="colorValue === selectColors"
+                                        class="position-absolute centered"
+                                        src="@/assets/img/icons/check.png"
+                                        alt="icon checklist"
+                                    />
+                                  </div>
+                                  <div
+                                      v-else
+                                      @click="moreColor = !moreColor"
+                                      class="p-4 d-inline-block rounded-circle me-2 roundedCustom position-relative"
+                                      :style="{backgroundColor: selectColors, display: moreColor === false ? 'flex' : 'none'}"
+                                  >
+                                    <img
+                                        class="position-absolute centered"
+                                        src="@/assets/img/icons/moreIcon.png"
+                                        alt="icon more"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                              type="button"
+                              class="btn btn-outline-primary"
+                              data-bs-dismiss="modal"
+                          >Batal</button>
+                          <button type="button" class="btn btn-primary">Buat Project</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -171,7 +306,7 @@ import setNavPills from "@/assets/js/nav-pills.js";
 import setTooltip from "@/assets/js/tooltip.js";
 import ArgonButton from "@/components/ArgonButton.vue";
 import BillingCard from "./components/BillingCard";
-import DashCard from "../examples/Cards/DashCard";
+import ArgonRadio from "../components/ArgonRadio";
 
 const body = document.getElementsByTagName("body")[0];
 
@@ -182,7 +317,7 @@ export default {
       showMenu: false
     };
   },
-  components: {DashCard, ArgonButton, BillingCard},
+  components: {ArgonRadio, ArgonButton, BillingCard},
 
   mounted() {
     this.$store.state.isAbsolute = true;
