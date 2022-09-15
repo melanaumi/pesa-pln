@@ -21,10 +21,10 @@
             <p class="m-0 text-center fw-bold">{{detail}}</p>
           </div>
         </div>
-        <div v-if="fav" class="position-absolute right">
+        <div v-if="fav" class="position-absolute right" @click="removeToFav()">
           <img :src="require(`@/assets/img/icons/${iconClass}.png`)" />
         </div>
-        <div v-if="fav=== false && this.mouse === true" class="position-absolute right">
+        <div v-if="fav=== false && this.mouse === true" class="position-absolute right" @click="addToFav()">
           <img :src="defaultHover" v-on:mouseover="mouseInStar" v-on:mouseleave="mouseOutStar" />
         </div>
       </div>
@@ -79,6 +79,13 @@ export default {
     },
     mouseOutStar() {
       this.defaultHover = require(`@/assets/img/icons/star1.png`);
+    },
+    // add and remove fav
+    addToFav() {
+      alert("add to fav")
+    },
+    removeToFav() {
+      alert("remove to fav")
     }
   },
 };

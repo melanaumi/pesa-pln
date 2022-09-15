@@ -26,19 +26,22 @@
             <div class="col-auto my-auto">
               <div class="h-100">
                 <span class="badge badge-sm bg-gradient-success">TUPOKSI</span>
-                <h5 class="mb-1">Sayo Kravits &nbsp; <i class="fas fa-chevron-down" aria-hidden="true"></i></h5>
-                <p class="mb-0 font-weight-bold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                <p class="mb-0 mt-2 font-weight-bold text-sm text-info">Tampilkan Lebih Banyak  &nbsp; <i class="fas fa-chevron-down" aria-hidden="true"></i></p>
+                <h5 class="mb-1">
+                  Sayo Kravits &nbsp;
+                  <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </h5>
+                <p
+                  class="mb-0 font-weight-bold text-sm"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <p class="mb-0 mt-2 font-weight-bold text-sm text-info">
+                  Tampilkan Lebih Banyak &nbsp;
+                  <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </p>
               </div>
             </div>
-            <div
-              class="mx-auto mt-3 col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0"
-            >
+            <div class="mx-auto mt-3 col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0">
               <div class="nav-wrapper position-relative end-0">
-                <ul
-                  class="p-1 bg-transparent nav nav-pills nav-fill"
-                  role="tablist"
-                >
+                <ul class="p-1 bg-transparent nav nav-pills nav-fill" role="tablist">
                   <li class="nav-item">
                     <a
                       class="px-0 py-1 mb-0 nav-link active"
@@ -56,12 +59,7 @@
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                       >
-                        <g
-                          stroke="none"
-                          stroke-width="1"
-                          fill="none"
-                          fill-rule="evenodd"
-                        >
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                           <g
                             transform="translate(-2319.000000, -291.000000)"
                             fill="#FFFFFF"
@@ -109,12 +107,7 @@
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                       >
                         <title>document</title>
-                        <g
-                          stroke="none"
-                          stroke-width="1"
-                          fill="none"
-                          fill-rule="evenodd"
-                        >
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                           <g
                             transform="translate(-1870.000000, -591.000000)"
                             fill="#FFFFFF"
@@ -157,12 +150,7 @@
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                       >
                         <title>settings</title>
-                        <g
-                          stroke="none"
-                          stroke-width="1"
-                          fill="none"
-                          fill-rule="evenodd"
-                        >
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                           <g
                             transform="translate(-2020.000000, -442.000000)"
                             fill="#FFFFFF"
@@ -200,101 +188,123 @@
       </div>
     </div>
     <div class="py-4 container-fluid">
-
-          <div class="card">
-            <div class="card-header pb-0">
-              <div class="d-flex align-items-center justify-content-end">
-                <div style="margin: 10px;">
-                  <div class="avatar-group">
-                    <a
-                        href="javascript:;"
-                        class="border-0 avatar avatar-sm rounded-circle"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="2 New Messages"
-                    >
-                      <img alt="Image placeholder" src="@/assets/img/team-1.jpg" />
-                    </a>
-                    <a
-                        href="javascript:;"
-                        class="border-0 avatar avatar-sm rounded-circle"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="1 New Message"
-                    >
-                      <img alt="Image placeholder" src="@/assets/img/team-2.jpg" />
-                    </a>
-                    <a
-                        href="javascript:;"
-                        class="border-0 avatar avatar-sm rounded-circle"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="13 New Messages"
-                    >
-                      <img alt="Image placeholder" src="@/assets/img/team-3.jpg" />
-                    </a>
-                    <a
-                        href="javascript:;"
-                        class="border-0 avatar avatar-sm rounded-circle"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="7 New Messages"
-                    >
-                      <img alt="Image placeholder" src="@/assets/img/team-4.jpg" />
-                    </a>
-                  </div>
-                </div>
-                <div style="margin: 10px;">
-                  <argon-button color="success" size="sm"
-                  ><img src="../assets/img/icons/user-plus.png" />&nbsp;&nbsp;Undang</argon-button
-                  >
-                </div>
-                <div style="margin: 10px;">
-                  <img src="../assets/img/icons/star3.png" />
-                </div>
-                <div
-                    class="pe-md-3 d-flex align-items-center" style="margin: 10px;"
+      <div class="card">
+        <div class="card-header pb-0">
+          <div class="d-flex align-items-center justify-content-end">
+            <div style="margin: 10px;">
+              <div class="avatar-group">
+                <a
+                  href="javascript:;"
+                  class="border-0 avatar avatar-sm rounded-circle"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="2 New Messages"
                 >
-                  <div class="input-group">
-                    <span class="input-group-text text-body">
-                      <i class="fas fa-search" aria-hidden="true"></i>
-                    </span>
-                    <input
-                        type="text"
-                        class="form-control"
-                        :placeholder="
-                        this.$store.state.isRTL ? 'أكتب هنا...' : 'Type here...'
-                      "
-                    />
-                  </div>
-                </div>
-                <div style="margin: 10px;">
-                  <img src="../assets/img/icons/Filter.png" />
-                </div>
-                <div style="margin: 10px;">
-                  <img src="../assets/img/icons/Sort.png" />
-                </div>
-                <div style="margin: 10px;">
-                  <img src="../assets/img/icons/Cho.png" />
-                </div>
+                  <img alt="Image placeholder" src="@/assets/img/team-1.jpg" />
+                </a>
+                <a
+                  href="javascript:;"
+                  class="border-0 avatar avatar-sm rounded-circle"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="1 New Message"
+                >
+                  <img alt="Image placeholder" src="@/assets/img/team-2.jpg" />
+                </a>
+                <a
+                  href="javascript:;"
+                  class="border-0 avatar avatar-sm rounded-circle"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="13 New Messages"
+                >
+                  <img alt="Image placeholder" src="@/assets/img/team-3.jpg" />
+                </a>
+                <a
+                  href="javascript:;"
+                  class="border-0 avatar avatar-sm rounded-circle"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="7 New Messages"
+                >
+                  <img alt="Image placeholder" src="@/assets/img/team-4.jpg" />
+                </a>
               </div>
-              <div class="row mt-3">
-                <div class="col-md-3">
-                  <billing-card />
-                </div>
-                <div class="col-md-3">
-                  <billing-card />
-                </div>
-                <div class="col-md-3">
-                  <billing-card />
-                </div>
-                <div class="col-md-3">
-                  <SwitchCard></SwitchCard>
-                </div>
+            </div>
+            <div style="margin: 10px;">
+              <argon-button color="primary" size="sm">
+                <img src="../assets/img/icons/user-plus.png" />&nbsp;&nbsp;Undang
+              </argon-button>
+            </div>
+            <div style="margin: 10px;">
+              <img src="../assets/img/icons/star3.png" />
+            </div>
+            <div class="pe-md-3 d-flex align-items-center" style="margin: 10px;">
+              <div class="input-group">
+                <span class="input-group-text text-body">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                </span>
+                <input type="text" class="form-control" :placeholder="'Type here...'" />
               </div>
-
+            </div>
+            <div style="margin: 10px;">
+              <img src="../assets/img/icons/Filter.png" />
+            </div>
+            <div style="margin: 10px;">
+              <img src="../assets/img/icons/Sort.png" />
+            </div>
+            <!-- dropdown aktivitas dan delete project -->
+            <div style="margin-top: 1px;">
+              <button
+                class="border-0 rounded-circle bg-white"
+                type="button" 
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img class="w-100" src="../assets/img/icons/Cho.png" />
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" role="menu">
+                <div class="p-2 d-flex">
+                  <a class="dropdown-item" href="/data">
+                    <img
+                      style="margin-right: 13px;"
+                      src="../assets/img/icons/aktivitas_dropdown.png"
+                    />Activitas
+                  </a>
+                </div>
+                <div class="p-2 d-flex">
+                  <a class="dropdown-item" href="#">
+                    <img style="margin-right: 10px;" src="../assets/img/icons/deleteIcon.png" />Keluar dari project
+                  </a>
+                </div>
+                <div class="p-2 d-flex">
+                  <a class="dropdown-item" href="#">
+                    <img style="margin-right: 10px;" src="../assets/img/icons/deleteIcon.png" />Hapus project
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <!-- <div style="margin: 10px;">
+              <img src="../assets/img/icons/Cho.png" />
+            </div>-->
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-3">
+              <billing-card />
+            </div>
+            <div class="col-md-3">
+              <billing-card />
+            </div>
+            <div class="col-md-3">
+              <billing-card />
+            </div>
+            <div class="col-md-3">
+              <SwitchCard></SwitchCard>
             </div>
           </div>
+        </div>
+      </div>
     </div>
   </main>
 </template>
