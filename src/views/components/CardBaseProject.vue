@@ -1,5 +1,10 @@
 <template>
-  <div class="mb-4 card roundedCustom" @click="urlParams()">
+  <div
+    class="mb-4 card roundedCustom"
+    v-on:mouseover="mouseIn"
+    v-on:mouseleave="mouseOut"
+    @click="urlParams()"
+  >
     <div class="p-1 card-body">
       <div class="d-flex align-items-center position-relative">
         <!-- inisial name Project -->
@@ -9,16 +14,18 @@
           <h6 class="font-weight-bolder ms-3" :class="valueColor">{{ value }}</h6>
           <!-- Tipe Project -->
           <div
-            :class="detail === 'KPI' ? 'bg-kpi roundedCustom ms-3 d-inline-block py-1 px-2'
-            : detail === 'Tupoksi' ? 'bg-tupoksi roundedCustom ms-3 d-inline-block py-1 px-2' 
-            : 'bg-lainnya roundedCustom ms-3 d-inline-block py-1 px-2'"
+            :class="detail === 'KPI' ? 'bg-kpi roundedCustomTipe ms-3 d-inline-block py-1 px-2'
+            : detail === 'Tupoksi' ? 'bg-tupoksi roundedCustomTipe ms-3 d-inline-block py-1 px-2' 
+            : 'bg-lainnya roundedCustomTipe ms-3 d-inline-block py-1 px-2'"
           >
             <p class="m-0 text-center fw-bold">{{detail}}</p>
           </div>
         </div>
-        <div class="position-absolute right">
-          <!-- <img v-bind:src="getImgUrl(iconClass)" /> -->
-          <img src="../../assets/img/icons/star2.png" />
+        <div v-if="fav" class="position-absolute right">
+          <img :src="require(`@/assets/img/icons/${iconClass}.png`)" />
+        </div>
+        <div v-if="fav=== false && this.mouse === true" class="position-absolute right">
+          <img :src="defaultHover" v-on:mouseover="mouseInStar" v-on:mouseleave="mouseOutStar" />
         </div>
       </div>
     </div>
@@ -28,18 +35,6 @@
 <script>
 export default {
   name: "cardBaseProject",
-  data() {
-    return {
-    };
-  },
-  methods: {
-    getImgUrl(img) { 
-      return '@/assets/img/icons/' + img
-    },
-    urlParams() {
-      this.$router.push({ name: "Project Board" });
-    }
-  },
   props: {
     detail: {
       type: String,
@@ -56,8 +51,35 @@ export default {
     },
     iconClass: {
       type: String,
-      required: true,
     },
+    fav: {
+      type: Boolean
+    }
+  },
+  data() {
+    return {
+      mouse: false,
+      defaultHover: require(`@/assets/img/icons/star1.png`),
+    };
+  },
+  methods: {
+    // url params to project board
+    urlParams() {
+      this.$router.push({ name: "Project Board" });
+    },
+    // handle mouse hover
+    mouseIn() {
+      this.mouse = true;
+    },
+    mouseOut() {
+      this.mouse = false;
+    },
+    mouseInStar() {
+      this.defaultHover = require(`@/assets/img/icons/star2.png`);
+    },
+    mouseOutStar() {
+      this.defaultHover = require(`@/assets/img/icons/star1.png`);
+    }
   },
 };
 </script>
@@ -75,6 +97,9 @@ export default {
 .bg-kpi {
   color: #5c00b9;
   background-color: #efe6f8;
+}
+.roundedCustomTipe {
+  border-radius: 8px;
 }
 .roundedCustom {
   transition: box-shadow 0.3s;

@@ -14,6 +14,7 @@
               :value="stateFavorits.title"
               :iconClass="stateFavorits.iconClass"
               :detail="stateFavorits.detail"
+              :fav="stateFavorits.fav"
             ></card>
           </div>
           <!-- semua Project -->
@@ -180,6 +181,7 @@
               :value="stateSemuaProjects.title"
               :iconClass="stateSemuaProjects.iconClass"
               :detail="stateSemuaProjects.detail"
+              :fav="stateSemuaProjects.fav"
             ></card>
           </div>
         </div>
@@ -228,13 +230,15 @@ export default {
         stateFavorit: [
         {
           title: "UX UI design",
-          iconClass: "star1.png",
+          iconClass: "star3",
           detail: "Lainnya",
+          fav: true
         },
         {
           title: "UX UI design",
-          iconClass: "",
+          iconClass: "star3",
           detail: "Tupoksi",
+          fav: true
         },
         ],
         stateSemuaProject: [
@@ -242,61 +246,73 @@ export default {
           title: "UX UI design",
           iconClass: "",
           detail: "KPI",
+          fav: false
         },
         {
           title: "UX UI design",
           iconClass: "",
           detail: "KPI",
+          fav: false
         },
         {
           title: "UX UI design",
           iconClass: "",
           detail: "KPI",
+          fav: false
         },
         {
           title: "UX UI design",
           iconClass: "",
           detail: "Lainnya",
+          fav: false
         },
         {
           title: "UX UI design",
           iconClass: "",
           detail: "Lainnya",
+          fav: false
         },
         {
           title: "UX UI design",
-          iconClass: "",
+          iconClass: "star3",
           detail: "Lainnya",
+          fav: true
+        },
+        {
+          title: "UX UI design",
+          iconClass: "star3",
+          detail: "Tupoksi",
+          fav: true
         },
         {
           title: "UX UI design",
           iconClass: "",
           detail: "Tupoksi",
+          fav: false
         },
         {
           title: "UX UI design",
           iconClass: "",
           detail: "Tupoksi",
-        },
-        {
-          title: "UX UI design",
-          iconClass: "",
-          detail: "Tupoksi",
-        },
-        {
-          title: "UX UI design",
-          iconClass: "",
-          detail: "Lainnya",
+          fav: false
         },
         {
           title: "UX UI design",
           iconClass: "",
           detail: "Lainnya",
+          fav: false
         },
         {
           title: "UX UI design",
           iconClass: "",
           detail: "Lainnya",
+          fav: false
+        },
+        {
+          title: "UX UI design",
+          iconClass: "",
+          detail: "Lainnya",
+          fav: false
         },
         ]
     };
@@ -304,7 +320,6 @@ export default {
   methods: {
     getColorValue(value) {
       this.colorValue = value;
-      console.log("color value = ",this.colorValue);
     }
   }
 };
