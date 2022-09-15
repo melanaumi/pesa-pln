@@ -15,7 +15,7 @@ const routes = [
   {
     path: "/",
     name: "/",
-    redirect: "/dashboard",
+    redirect: "/signup",
   },
   // {
   //   path: "/dashboard-default",

@@ -27,7 +27,7 @@
 
                 <form role="form">
                   <div class="text-center">
-                    <argon-button fullWidth color="info" variant="gradient" class="my-4 mb-2"> <i class="fas fa-key"></i> &nbsp;&nbsp; Login dengan PLN SSO</argon-button>
+                    <argon-button @click="cekAuthentication()" fullWidth color="info" variant="gradient" class="my-4 mb-2"> <i class="fas fa-key"></i> &nbsp;&nbsp; Login dengan PLN SSO</argon-button>
                   </div>
                 </form>
               </div>
@@ -48,6 +48,11 @@ export default {
   name: "signin",
   components: {
     ArgonButton,
+  },
+  methods: {
+    cekAuthentication() {
+      this.$router.push({ name: "Dashboard" });
+    }
   },
   created() {
     this.$store.state.hideConfigButton = true;

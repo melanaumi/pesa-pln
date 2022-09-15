@@ -1,5 +1,5 @@
 <template>
-  <div class="modal" id="myModalUndangMember">
+  <div class="modal" id="myModalLogoutProject">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <!-- modal header -->
@@ -8,10 +8,10 @@
             style="color:black;"
             class="modal-title mt-2"
             id="exampleModalToggleLabel"
-          >Undang member</h5>
+          >Anda yakin ingin keluar dari project UX/UI Design ?</h5>
           <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
           <button
-            style="margin-top: -10px;"
+            style="margin-top: -20px;"
             type="button"
             data-bs-dismiss="modal"
             aria-label="Close"
@@ -19,7 +19,18 @@
         </div>
         <!-- modal body -->
         <div class="modal-body">
-          ini modal undang member
+          <p
+            style="font-size: 15px;"
+          >Anda tidak akan bisa melihat task project ini lagi sampai anda di invite kembali oleh kreator</p>
+        </div>
+        <div class="modal-footer-delete">
+          <button
+            type="button"
+            class="btn btn-outline-primary w-35"
+            data-bs-dismiss="modal"
+            @click="hitApiDelete()"
+          >Ya, keluar</button>
+          <button type="button" class="btn btn-primary w-35" data-bs-dismiss="modal">Batalkan</button>
         </div>
       </div>
     </div>
@@ -34,7 +45,7 @@ export default {
   },
   methods:{
     hitApiDelete() {
-      alert("hit api delete project")
+      alert("hit api keluar project")
     }
   }
 }

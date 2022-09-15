@@ -105,6 +105,21 @@
   }
 }
 
+.modal-header-delete {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
+  padding: $modal-header-padding;
+  // border-bottom: $modal-header-border-width solid $modal-header-border-color;
+  @include border-top-radius($modal-content-inner-border-radius);
+
+  .btn-close {
+    padding: ($modal-header-padding-y * .5) ($modal-header-padding-x * .5);
+    margin: ($modal-header-padding-y * -.5) ($modal-header-padding-x * -.5) ($modal-header-padding-y * -.5) auto;
+  }
+}
+
 // Title text within header
 .modal-title {
   margin-bottom: 0;
@@ -136,6 +151,25 @@
   // This solution is far from ideal because of the universal selector usage,
   // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
   > * {
+    margin: $modal-footer-margin-between * .5;
+  }
+}
+
+// Footer (for actions)
+.modal-footer-delete {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  align-items: center; // vertically center
+  justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
+  padding: $modal-inner-padding - $modal-footer-margin-between * .5;
+  // border-top: $modal-footer-border-width solid $modal-footer-border-color;
+  @include border-bottom-radius($modal-content-inner-border-radius);
+
+  // Place margin between footer elements
+  // This solution is far from ideal because of the universal selector usage,
+  // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
+  >* {
     margin: $modal-footer-margin-between * .5;
   }
 }
