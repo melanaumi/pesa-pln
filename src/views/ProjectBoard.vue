@@ -1,31 +1,34 @@
 <template>
   <main>
-    <div class="container-fluid">
+    <div className="container-fluid">
       <div
-        class="page-header min-height-150"
-        style="
+          className="page-header min-height-150"
+          style="
           background-color: #246997;
           margin-right: -24px;
           margin-left: -34%;
         "
       >
-        <span class="mask opacity-6"></span>
+        <span className="mask opacity-6"></span>
       </div>
 
-      <div class="mt-n7" style="position: relative;">
-        <div class="p-3">
-          <div class="row gx-4">
-            <div class="col-auto">
-              <div class="avatar avatar-xxl avatar-size-50 position-relative" style="background-color: #B3E4EA;">
+      <div className="mt-n7" style="position: relative;">
+        <div className="p-3">
+          <div className="row gx-4">
+            <div className="col-auto">
+              <div className="avatar avatar-xxl avatar-size-50 position-relative" style="background-color: #B3E4EA;">
                 <p style="font-size: 20pt; font-weight: bolder; margin-top: 15px; color: #246997;">UU</p>
               </div>
             </div>
-            <div class="col-auto my-auto">
-              <div class="h-100">
-                <span class="badge badge-xl bg-gradient-success text-white">TUPOKSI</span>
-                <h4 class="mb-3 mt-2 text-white">Sayo Kravits &nbsp; <i class="fas fa-chevron-down" aria-hidden="true"></i></h4>
-                <p class="mb-0 mt-3 col-lg-12 col-md-12 my-sm-auto ms-sm-auto me-sm-0 font-weight-bold text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                <p class="mb-0 mt-2 font-weight-bold text-sm text-info">Tampilkan Lebih Banyak  &nbsp; <i class="fas fa-chevron-down" aria-hidden="true"></i></p>
+            <div className="col-auto my-auto">
+              <div className="h-100">
+                <span className="badge badge-xl bg-gradient-success text-white">TUPOKSI</span>
+                <h4 className="mb-3 mt-2 text-white">Sayo Kravits &nbsp; <i className="fas fa-chevron-down"
+                                                                            aria-hidden="true"></i></h4>
+                <p className="mb-0 mt-3 col-lg-12 col-md-12 my-sm-auto ms-sm-auto me-sm-0 font-weight-bold text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <p className="mb-0 mt-2 font-weight-bold text-sm text-info">Tampilkan Lebih Banyak &nbsp; <i
+                    className="fas fa-chevron-down" aria-hidden="true"></i></p>
               </div>
             </div>
           </div>
@@ -33,102 +36,132 @@
       </div>
     </div>
 
-    <div class="py-4 container-fluid">
-          <div class="card">
-            <div class="card-header pb-4">
-              <div class="d-flex align-items-center justify-content-end">
-                <div style="margin: 10px;">
-                  <div class="avatar-group">
-                    <a
-                        href="javascript:;"
-                        class="border-0 avatar avatar-sm rounded-circle"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="2 New Messages"
-                    >
-                      <img alt="Image placeholder" src="@/assets/img/team-1.jpg" />
-                    </a>
-                    <a
-                        href="javascript:;"
-                        class="border-0 avatar avatar-sm rounded-circle"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="1 New Message"
-                    >
-                      <img alt="Image placeholder" src="@/assets/img/team-2.jpg" />
-                    </a>
-                    <a
-                        href="javascript:;"
-                        class="border-0 avatar avatar-sm rounded-circle"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="13 New Messages"
-                    >
-                      <img alt="Image placeholder" src="@/assets/img/team-3.jpg" />
-                    </a>
-                    <a
-                        href="javascript:;"
-                        class="border-0 avatar avatar-sm rounded-circle"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="7 New Messages"
-                    >
-                      <img alt="Image placeholder" src="@/assets/img/team-4.jpg" />
-                    </a>
-                  </div>
-                </div>
-                <div style="margin: 10px;">
-                  <argon-button color="success" size="sm"
-                  ><img src="../assets/img/icons/user-plus.png" />&nbsp;&nbsp;Undang</argon-button
-                  >
-                </div>
-                <div style="margin: 10px;">
-                  <img src="../assets/img/icons/star3.png" />
-                </div>
-                <div
-                    class="pe-md-3 d-flex align-items-center" style="margin: 10px;"
+    <div className="py-4 container-fluid">
+      <div className="card">
+        <div className="card-header pb-4">
+          <div className="d-flex align-items-center justify-content-end">
+            <div style="margin: 10px;">
+              <div className="avatar-group">
+                <a
+                    href="javascript:;"
+                    className="border-0 avatar avatar-sm rounded-circle"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="2 New Messages"
                 >
-                  <div class="input-group">
-                    <span class="input-group-text text-body">
-                      <i class="fas fa-search" aria-hidden="true"></i>
+                  <img alt="Image placeholder" src="@/assets/img/team-1.jpg"/>
+                </a>
+                <a
+                    href="javascript:;"
+                    className="border-0 avatar avatar-sm rounded-circle"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="1 New Message"
+                >
+                  <img alt="Image placeholder" src="@/assets/img/team-2.jpg"/>
+                </a>
+                <a
+                    href="javascript:;"
+                    className="border-0 avatar avatar-sm rounded-circle"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="13 New Messages"
+                >
+                  <img alt="Image placeholder" src="@/assets/img/team-3.jpg"/>
+                </a>
+                <a
+                    href="javascript:;"
+                    className="border-0 avatar avatar-sm rounded-circle"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="7 New Messages"
+                >
+                  <img alt="Image placeholder" src="@/assets/img/team-4.jpg"/>
+                </a>
+              </div>
+            </div>
+            <div style="margin: 10px;">
+              <argon-button color="success" size="sm"
+              ><img src="../assets/img/icons/user-plus.png"/>&nbsp;&nbsp;Undang
+              </argon-button
+              >
+            </div>
+            <div style="margin: 10px;">
+              <img src="../assets/img/icons/star3.png"/>
+            </div>
+            <div
+                className="pe-md-3 d-flex align-items-center" style="margin: 10px;"
+            >
+              <div className="input-group">
+                    <span className="input-group-text text-body">
+                      <i className="fas fa-search" aria-hidden="true"></i>
                     </span>
-                    <input
-                        type="text"
-                        class="form-control"
-                        :placeholder="
-                        this.$store.state.isRTL ? 'أكتب هنا...' : 'Type here...'
+                <input
+                    type="text"
+                    className="form-control"
+                    :placeholder="
+                        this.$store.state.isRTL ? 'أكتب هنا...' : 'Cari Task ...'
                       "
-                    />
-                  </div>
-                </div>
-                <div style="margin: 10px;">
-                  <img src="../assets/img/icons/Filter.png" />
-                </div>
-                <div style="margin: 10px;">
-                  <img src="../assets/img/icons/Sort.png" />
-                </div>
-                <div style="margin: 10px;">
-                  <img src="../assets/img/icons/Cho.png" />
-                </div>
+                />
               </div>
-
-              <div class="row mt-3">
-                <div class="col-md-3">
-                  <billing-card />
+            </div>
+            <div style="margin: 10px;">
+              <img src="../assets/img/icons/Filter.png"/>
+            </div>
+            <div style="margin: 10px;">
+              <img src="../assets/img/icons/Sort.png"/>
+            </div>
+            <!-- dropdown aktivitas dan delete project -->
+            <div style="margin-top: 1px;">
+              <button
+                  className="border-0 rounded-circle bg-white"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+              >
+                <img className="w-100" src="../assets/img/icons/Cho.png"/>
+              </button>
+              <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1" role="menu">
+                <div className="p-2 d-flex">
+                  <a className="dropdown-item" href="/data">
+                    <img
+                        style="margin-right: 13px;"
+                        src="../assets/img/icons/aktivitas_dropdown.png"
+                    />Activitas
+                  </a>
                 </div>
-                <div class="col-md-3">
-                  <billing-card />
+                <div className="p-2 d-flex">
+                  <a className="dropdown-item" href="#">
+                    <img style="margin-right: 10px;" src="../assets/img/icons/deleteIcon.png"/>Keluar dari project
+                  </a>
                 </div>
-                <div class="col-md-3">
-                  <billing-card />
+                <div className="p-2 d-flex">
+                  <a className="dropdown-item" href="#">
+                    <img style="margin-right: 10px;" src="../assets/img/icons/deleteIcon.png"/>Hapus project
+                  </a>
                 </div>
-                <div class="col-md-3">
-                  <DashCard></DashCard>
-                </div>
-              </div>
-
+              </ul>
             </div>
           </div>
+
+          <div className="row mt-3">
+            <div className="col-md-3">
+              <billing-card/>
+            </div>
+            <div className="col-md-3">
+              <billing-card/>
+            </div>
+            <div className="col-md-3">
+              <billing-card/>
+            </div>
+            <div className="col-md-3">
+              <DashCard></DashCard>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </main>
 </template>
@@ -149,7 +182,7 @@ export default {
       showMenu: false
     };
   },
-  components: {DashCard, ArgonButton, BillingCard },
+  components: {DashCard, ArgonButton, BillingCard},
 
   mounted() {
     this.$store.state.isAbsolute = true;

@@ -25,9 +25,9 @@
   color: $dropdown-color;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
-  background-color: $dropdown-bg;
+  background-color: white;
   background-clip: padding-box;
-  border: $dropdown-border-width solid $dropdown-border-color;
+  border: 1px solid #DDDDDD;
   @include border-radius($dropdown-border-radius);
   @include box-shadow($dropdown-box-shadow);
 
