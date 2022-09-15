@@ -16,7 +16,11 @@
           <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
             <div class="card">
               <div class="card-header text-center pt-4">
-                <h5>Selamat Datang di <br> PLN Employee Super App</h5>
+                <img
+                    src="../assets/img/login-icon.png"
+                    style="width: 280px;"
+                />
+                <h4 class="mt-6">Selamat Datang di <br> PLN Employee Super App</h4>
                 <p
                     class="text-lead text-black"
                 >Login untuk masuk ke dalam aplikasi</p>

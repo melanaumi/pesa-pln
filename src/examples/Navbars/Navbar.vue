@@ -47,7 +47,7 @@
                 aria-expanded="false"
                 @click="showMenu = !showMenu"
             >
-              <i class="cursor-pointer fa fa-bell"></i>
+              <i class="cursor-pointer fa fa-bell" style="font-size: x-large;"></i>
             </a>
             <ul
                 class="px-2 py-3 dropdown-menu dropdown-menu-end me-sm-n4"
@@ -157,40 +157,9 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item d-flex align-items-center">
-            <router-link
-              :to="{ name: 'Signin' }"
-              class="px-0 nav-link font-weight-bold text-black"
-              target="_blank"
-            >
-              <i
-                class="fa fa-user"
-                :class="this.$store.state.isRTL ? 'ms-sm-2' : 'me-sm-2'"
-              ></i>
-              <span v-if="this.$store.state.isRTL" class="d-sm-inline d-none"
-                >يسجل دخول</span
-              >
-              <span v-else class="d-sm-inline d-none">Sign In</span>
-            </router-link>
-          </li>
-          <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-            <a
-              href="#"
-              @click="toggleSidebar"
-              class="p-0 nav-link text-black"
-              id="iconNavbarSidenav"
-            >
-              <div class="sidenav-toggler-inner">
-                <i class="sidenav-toggler-line bg-white"></i>
-                <i class="sidenav-toggler-line bg-white"></i>
-                <i class="sidenav-toggler-line bg-white"></i>
-              </div>
-            </a>
-          </li>
-          <li class="px-3 nav-item d-flex align-items-center">
-            <a class="p-0 nav-link text-black" @click="toggleConfigurator">
-              <i class="cursor-pointer fa fa-cog fixed-plugin-button-nav"></i>
-            </a>
+
+          <li class="border-0 avatar avatar-sm rounded-circle bg-info">
+            <p style="margin-top: 12px; font-size: 1.2rem; font-weight: 700;"> UU </p>
           </li>
         </ul>
       </div>
