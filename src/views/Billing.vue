@@ -37,7 +37,7 @@
     </div>
     <div class="row">
       <div class="col-md-7">
-        <billing-card />
+        <status-card />
       </div>
       <div class="col-md-5">
         <transaction-card />
@@ -51,7 +51,7 @@ import MasterCard from "@/examples/Cards/MasterCard.vue";
 import DefaultInfoCard from "@/examples/Cards/DefaultInfoCard.vue";
 import PaymentCard from "./components/PaymentCard.vue";
 import InvoiceCard from "./components/InvoiceCard.vue";
-import BillingCard from "./components/BillingCard.vue";
+import StatusCard from "./components/StatusCard.vue";
 import TransactionCard from "./components/TransactionCard.vue";
 
 export default {
@@ -61,7 +61,7 @@ export default {
     DefaultInfoCard,
     PaymentCard,
     InvoiceCard,
-    BillingCard,
+    StatusCard,
     TransactionCard,
   },
   data() {

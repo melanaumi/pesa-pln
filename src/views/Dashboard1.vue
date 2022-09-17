@@ -5,6 +5,7 @@
         <div class="row">
           <div class="col-lg-12">
             <categories-card />
+
           </div>
         </div>
 
