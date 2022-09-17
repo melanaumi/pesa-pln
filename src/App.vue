@@ -6,26 +6,16 @@
     ></div>
     <sidenav
       :custom_class="this.$store.state.mcolor"
-      :class="[
-      this.$store.state.isTransparent,
-      this.$store.state.isRTL ? 'fixed-end' : 'fixed-start'
-    ]"
+      :class="['fixed-start']"
       v-if="this.$store.state.showSidenav"
     />
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
-      <!-- nav -->
-      <navbar
-        :class="[navClasses]"
-        :textWhite="
-        this.$store.state.isAbsolute ? 'text-white opacity-8' : 'text-white'
-      "
-      :minNav="navbarMinimize"
-      v-if="this.$store.state.showNavbar"
-    />
-    <router-view />
-    <configurator
-      :toggle="toggleConfigurator"
-      :class="[
+      <!-- navbar -->
+      <navbar />
+      <router-view />
+      <configurator
+        :toggle="toggleConfigurator"
+        :class="[
         this.$store.state.showConfig ? 'show' : '',
         this.$store.state.hideConfigButton ? 'd-none' : ''
       ]"
@@ -34,8 +24,8 @@
   </div>
 </template>
 <script>
-import Sidenav from "./examples/Sidenav";
 // import Configurator from "@/examples/Configurator.vue";
+import Sidenav from "./examples/Sidenav";
 import Navbar from "@/examples/Navbars/Navbar.vue";
 import { mapMutations } from "vuex";
 
@@ -52,18 +42,23 @@ export default {
   computed: {
     navClasses() {
       return {
-        "position-sticky bg-white left-auto top-2 z-index-sticky":
-          this.$store.state.isNavFixed && !this.$store.state.darkMode,
-        "position-sticky bg-default left-auto top-2 z-index-sticky":
-          this.$store.state.isNavFixed && this.$store.state.darkMode,
-        "position-absolute px-4 mx-0 w-100 z-index-2": this.$store.state
-          .isAbsolute,
-        "px-0 mx-4": !this.$store.state.isAbsolute
+      //   "position-sticky bg-white left-auto top-2 z-index-sticky":
+      //     this.$store.state.isNavFixed && !this.$store.state.darkMode,
+      //   "position-sticky bg-default left-auto top-2 z-index-sticky":
+      //     this.$store.state.isNavFixed && this.$store.state.darkMode,
+      //   "position-absolute px-4 mx-0 w-100 z-index-2": this.$store.state
+      //     .isAbsolute,
+      //   "px-0 mx-4": !this.$store.state.isAbsolute
       };
     }
   },
   beforeMount() {
-    this.$store.state.isTransparent = "bg-transparent";
+    // this.$store.state.isTransparent = "bg-transparent";
   }
 };
 </script>
+<style>
+* {
+  font-family: "Roboto", sans-serif;
+}
+</style>

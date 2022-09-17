@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar shadow-sm w-100 navbar-main navbar-expand-lg bg-white fixed-top">
+  <nav class="navbar w-100 navbar-main navbar-expand-lg fixed-top">
     <div class="px-5 py-1 container-fluid">
       <breadcrumbs :currentPage="currentRouteName" textBlack="text-black" />
 
@@ -27,9 +27,7 @@
         </div>
         <ul class="navbar-nav justify-content-end">
           <li
-            class="nav-item dropdown d-flex align-items-center"
-            :class="this.$store.state.isRTL ? 'ps-2' : 'pe-2'"
-          >
+            class="nav-item dropdown d-flex align-items-center pe-2">
             <a
               href="#"
               class="p-0 nav-link text-black"

@@ -10,12 +10,13 @@
             id="exampleModalToggleLabel"
           >Hapus Project</h5>
           <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-          <button
-            style="margin-top: -10px;"
+          <i
+            style="margin-top: -20px;"
             type="button"
             data-bs-dismiss="modal"
             aria-label="Close"
-          >X</button>
+            class="bi bi-x-lg"
+          ></i>
         </div>
         <!-- modal body -->
         <div class="modal-body">
