@@ -104,7 +104,7 @@
                 <span class="input-group-text text-body">
                   <i class="fas fa-search" aria-hidden="true"></i>
                 </span>
-                <input type="text" class="form-control" :placeholder="'Cari Task ...'" />
+                <input type="text" class="form-control" :placeholder="'Cari Pekerjaan ...'" />
               </div>
             </div>
             <!-- dropdown filter -->
@@ -226,13 +226,13 @@
 
           <div class="row mt-3">
             <div class="col-md-3">
-              <billing-card />
+              <status-card />
             </div>
             <div class="col-md-3">
-              <billing-card />
+              <status-card />
             </div>
             <div class="col-md-3">
-              <billing-card />
+              <status-card />
             </div>
             <div class="col-md-3">
               <div
@@ -341,7 +341,7 @@
 import setNavPills from "@/assets/js/nav-pills.js";
 import setTooltip from "@/assets/js/tooltip.js";
 import ArgonButton from "@/components/ArgonButton.vue";
-import BillingCard from "./components/BillingCard";
+import StatusCard from "./components/StatusCard";
 import ArgonRadio from "../components/ArgonRadio";
 import modalLogoutProject from "@/views/components/modalLogoutProject.vue";
 import modalDeleteProject from "@/views/components/modalDeleteProject.vue";
@@ -356,7 +356,7 @@ export default {
       showMenu: false
     };
   },
-  components: {ArgonButton, ArgonRadio, BillingCard, modalLogoutProject, modalDeleteProject, modalUndangMember},
+  components: {ArgonButton, ArgonRadio, StatusCard, modalLogoutProject, modalDeleteProject, modalUndangMember},
   methods: {
     openSideBarRiwayatAktifitas()  {
       alert('open to sidebar riwayat aktivitas');

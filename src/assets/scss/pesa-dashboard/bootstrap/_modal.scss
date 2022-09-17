@@ -219,6 +219,7 @@
 @include media-breakpoint-up(lg) {
 
   .modal-lg,
+  .modal-sxl,
   .modal-xl {
     max-width: $modal-lg;
   }
