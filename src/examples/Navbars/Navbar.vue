@@ -34,7 +34,12 @@
               aria-expanded="false"
               @click="showMenu = !showMenu"
             >
-              <i class="cursor-pointer fa fa-bell" style="font-size: x-large;"></i>
+            <div class="position-absolute">
+              <div class="bg-danger text-white rounded-pill ms-2">
+                <p class="mx-1" style="font-size: 10px;">3</p>
+              </div>
+            </div>
+            <i class="cursor-pointer fa fa-bell" style="font-size: x-large;"></i>
             </a>
             <ul
               class="px-2 py-3 dropdown-menu dropdown-menu-end me-sm-n4"
@@ -42,6 +47,10 @@
               aria-labelledby="dropdownMenuButton"
             >
               <li class="mb-2">
+                 <div class="mt-2">
+                  <span style="font-size: 18px;" class="text-dark fw-bold ms-3">Notifikasi</span>
+                  <hr />
+                </div>
                 <a class="dropdown-item border-radius-md" href="javascript:;">
                   <div class="py-1 d-flex">
                     <div class="my-auto">
@@ -135,8 +144,27 @@
               </li>
             </ul>
           </li>
-          <li class="border-0 avatar avatar-sm rounded-circle bg-primary">
-            <p style="margin-top: 15px; font-size: 1rem; font-weight: 700;">UU</p>
+          <li class="dropdown">
+            <button
+            class="border-0 rounded-circle bg-white"
+            type="button"
+            id="dropdownLogout"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            :class="[showLogout ? 'show' : '']"
+            @click="showLogout = !showLogout"
+          >
+            <li class="border-0 avatar avatar-sm rounded-circle bg-primary">
+              <p style="margin-top: 15px; font-size: 1rem; font-weight: 700;">UU</p>
+            </li>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" :class="showLogout ? 'show' : ''" aria-labelledby="dropdownLogout">
+            <button class="p-1 d-flex align-items-center dropdown-item" @click="logOut()">
+              <div class="mx-3">
+                <button type="button" class="dropdown-item text-dark">Log out</button>
+              </div>
+            </button>
+          </ul>
           </li>
         </ul>
       </div>
@@ -151,7 +179,8 @@ export default {
   name: "navbar",
   data() {
     return {
-      showMenu: false
+      showMenu: false,
+      showLogout: false
     };
   },
   props: ["minNav", "textBlack"],
@@ -165,6 +194,9 @@ export default {
     toggleSidebar() {
       this.toggleSidebarColor("bg-white");
       this.navbarMinimize();
+    },
+    logOut() {
+      this.$router.push({ name: 'Signup' })
     }
   },
   components: {

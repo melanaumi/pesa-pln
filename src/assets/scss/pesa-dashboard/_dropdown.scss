@@ -67,7 +67,7 @@
     }
 
     &:not(.dropdown-hover) .dropdown-menu {
-      margin-top: $dropdown-mt !important;
+      margin-top: 10px !important;
     }
 
     .dropdown-menu {
@@ -124,7 +124,7 @@
       }
 
       &:not(.dropdown-hover) .dropdown-menu {
-        margin-top: $dropdown-mt !important;
+        margin-top: 10px !important;
       }
 
       .dropdown-menu.show {
@@ -170,7 +170,7 @@
       }
     }
     &:not(.dropdown-hover) .dropdown-menu {
-      margin-top: $dropdown-mt !important;
+      margin-top: 10px !important;
     }
 
     .dropdown-menu.show {

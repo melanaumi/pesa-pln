@@ -230,7 +230,7 @@
                       data-bs-target="#myModalLogoutProject"
                       data-bs-toggle="modal"
                       class="dropdown-item"
-                    >Keluar dari project</button>
+                    >Keluar dari KPI / project</button>
                   </div>
                 </button>
                 <button
@@ -247,7 +247,7 @@
                       data-bs-target="#myModalDeleteProject"
                       data-bs-toggle="modal"
                       class="dropdown-item"
-                    >Hapus project</button>
+                    >Hapus KPI / project</button>
                   </div>
                 </button>
               </ul>
