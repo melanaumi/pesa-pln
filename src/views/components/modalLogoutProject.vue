@@ -10,12 +10,13 @@
             id="exampleModalToggleLabel"
           >Anda yakin ingin keluar dari project UX/UI Design ?</h5>
           <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-          <button
+           <i
             style="margin-top: -20px;"
             type="button"
             data-bs-dismiss="modal"
             aria-label="Close"
-          >X</button>
+            class="bi bi-x-lg"
+          ></i>
         </div>
         <!-- modal body -->
         <div class="modal-body">

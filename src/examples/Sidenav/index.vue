@@ -1,24 +1,27 @@
 <template>
-  <div
-    v-show="this.$store.state.layout === 'default'"
-    class="min-height-50 position-absolute w-100"
-    :class="`${this.$store.state.darkMode ? 'bg-transparent' : 'bg-transparent'}`"
-  />
+  <div v-show="this.$store.state.layout === 'default'" class="min-height-50 position-absolute" />
   <aside
     class="overflow-auto border-0 sidenav navbar navbar-vertical navbar-expand-xs"
     :class="`${
-      this.$store.state.isRTL
-        ? 'me-3 rotate-caret fixed-end'
-        : 'fixed-start'
-    } 
-    ${
-      this.$store.state.layout === 'landing'
-        ? 'bg-transparent shadow-none'
-        : ' '
-    } ${this.$store.state.sidebarType}`"
+    this.$store.state.isRTL
+    ? 'me-3 rotate-caret fixed-end'
+    : 'fixed-start'
+  } 
+  ${
+    this.$store.state.layout === 'landing'
+    ? 'bg-transparent shadow-none'
+    : ' '
+  } ${this.$store.state.sidebarType}`"
     id="sidenav-main"
   >
-    <div class="sidenav-header">
+    <div class="sidenav-header position-relative">
+      <!-- sidebar toggle -->
+      <div
+        style="right:0px; z-index: 1; bottom:25px; cursor: pointer;"
+        class="position-absolute rounded-circle shadow"
+      >
+        <i class="fas fa-chevron-left px-2 py-1" id="header-toggle"></i>
+      </div>
       <i
         class="top-0 p-3 cursor-pointer fas fa-times text-secondary opacity-5 position-absolute end-0 d-none d-xl-none"
         aria-hidden="true"

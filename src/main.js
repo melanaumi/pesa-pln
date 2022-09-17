@@ -5,6 +5,7 @@ import router from "./router";
 import "./assets/css/nucleo-icons.css";
 import "./assets/css/nucleo-svg.css";
 import PesaDashboard from "./pesa-dashboard";
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 const appInstance = createApp(App);
 appInstance.use(store);

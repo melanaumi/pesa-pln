@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4 container-fluid">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
         <div class="row">
@@ -19,14 +19,14 @@
           </div>
           <!-- semua Project -->
           <div class="d-flex justify-content-between">
-            <h5>Semua Project</h5>
+            <h5>Semua KPI / Project</h5>
             <button
               type="button"
               data-bs-target="#myModal"
               data-bs-toggle="modal"
               class="btn btn-primary"
             >
-              <i class="fas fa-plus me-2"></i>Tambah Project
+              <i class="fas fa-plus me-2"></i>Tambah KPI / Project
             </button>
             <div class="modal" id="myModal">
               <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -34,12 +34,13 @@
                   <!-- modal header -->
                   <div class="modal-header">
                     <h5 class="modal-title">Buat Project</h5>
-                    <button
+                    <i
+                      style="margin-top: -20px;"
                       type="button"
-                      class="btn-close"
                       data-bs-dismiss="modal"
                       aria-label="Close"
-                    ></button>
+                      class="bi bi-x-lg"
+                    ></i>
                   </div>
                   <!-- modal body -->
                   <div class="modal-body">
