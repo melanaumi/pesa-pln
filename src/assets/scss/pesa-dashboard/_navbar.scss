@@ -1,5 +1,6 @@
 .navbar {
-  box-shadow: $navbar-box-shadow;
+  background-color: #f8f9fa !important;
+  border-bottom: 1px solid rgb(223, 223, 223) !important;
 
   .navbar-brand {
     color: $dark;
