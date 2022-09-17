@@ -33,7 +33,7 @@ const routes = [
     component: Project,
   },
   {
-    path: "/project-board",
+    path: "/project/project-board",
     name: "Project Board",
     component: ProjectBoard,
   },

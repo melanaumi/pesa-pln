@@ -4,13 +4,13 @@
       <div class="modal-content">
         <!-- modal header -->
         <div class="modal-header-delete">
-          <h5
-            style="color:black;"
-            class="modal-title mt-2"
-            id="exampleModalToggleLabel"
-          >Anda yakin ingin keluar dari project UX/UI Design ?</h5>
-          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-           <i
+          <h5 style="color:black;" class="modal-title mt-2" id="exampleModalToggleLabel">
+            Anda yakin ingin keluar dari project
+            <!-- color state -->
+            <span class="text-primary">UX/UI Design</span>
+            ?
+          </h5>
+          <i
             style="margin-top: -20px;"
             type="button"
             data-bs-dismiss="modal"
@@ -40,6 +40,8 @@
 <script>
 export default {
   name: "modal-delete",
+  components:{
+  },
   data() {
     return {
     }

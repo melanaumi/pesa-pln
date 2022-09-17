@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar w-100 navbar-main navbar-expand-lg fixed-top">
-    <div class="px-5 py-1 container-fluid">
+    <div class="px-4 py-1 container-fluid">
       <breadcrumbs :currentPage="currentRouteName" textBlack="text-black" />
 
       <div
@@ -9,7 +9,7 @@
         id="navbar"
       >
         <div
-          class="pe-md-3 d-flex align-items-center"
+          class="pe-md-4 pe-4 d-flex align-items-center"
           :class="this.$store.state.isRTL ? 'me-md-auto' : 'ms-md-auto'"
         >
           <div class="input-group">
@@ -19,15 +19,12 @@
             <input
               type="text"
               class="form-control"
-              :placeholder="
-                this.$store.state.isRTL ? 'Type here...' : 'Type here...'
-              "
+              :placeholder="'Cari KPI / project atau kerjaan'"
             />
           </div>
         </div>
         <ul class="navbar-nav justify-content-end">
-          <li
-            class="nav-item dropdown d-flex align-items-center pe-2">
+          <li class="nav-item dropdown d-flex align-items-center pe-4">
             <a
               href="#"
               class="p-0 nav-link text-black"
@@ -138,8 +135,8 @@
               </li>
             </ul>
           </li>
-          <li class="border-0 avatar avatar-sm rounded-circle bg-info">
-            <p style="margin-top: 12px; font-size: 1.2rem; font-weight: 700;">UU</p>
+          <li class="border-0 avatar avatar-sm rounded-circle bg-primary">
+            <p style="margin-top: 15px; font-size: 1rem; font-weight: 700;">UU</p>
           </li>
         </ul>
       </div>
@@ -180,3 +177,5 @@ export default {
   }
 };
 </script>
+<style scoped>
+</style>

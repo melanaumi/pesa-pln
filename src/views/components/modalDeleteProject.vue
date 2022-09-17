@@ -9,7 +9,6 @@
             class="modal-title mt-2"
             id="exampleModalToggleLabel"
           >Hapus Project</h5>
-          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
           <i
             style="margin-top: -20px;"
             type="button"
@@ -22,12 +21,15 @@
         <div class="modal-body">
           <form>
             <div
-              style="color: black; font-size:13px; background-color: #FFF5E9;"
-              class="alert"
-              role="alert"
+            style="color: black; font-size:13px; background-color: #FFF5E9;"
+            class="alert d-flex align-items-center"
+            role="alert"
             >
+            <i class="text-warning fs-4 bi bi-exclamation-triangle me-3"></i>
+            <span>
               Semua task dan aktivitas yang ada di project ini akan di hapus,
               dan anda tidak akan bisa membukanya kembali. Penghapusan ini tidak bisa diundo.
+            </span>
             </div>
             <div class="mb-3">
               <p style="font-size: 15px;">Masukkan nama project untuk konfirmasi project yang ingin Anda hapus</p>

@@ -12,22 +12,23 @@
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
       <!-- navbar -->
       <navbar
-          :class="[navClasses]"
-          :textWhite="
+        :class="[navClasses]"
+        :textWhite="
         this.$store.state.isAbsolute ? 'text-white opacity-8' : 'text-white'
-      "
-          :minNav="navbarMinimize"
-          v-if="this.$store.state.showNavbar"
+        "
+        :minNav="navbarMinimize"
+        v-if="this.$store.state.showNavbar"
       />
       <router-view />
-      <configurator
+      <!-- <configurator
         :toggle="toggleConfigurator"
         :class="[
         this.$store.state.showConfig ? 'show' : '',
         this.$store.state.hideConfigButton ? 'd-none' : ''
-      ]"
-      />
+        ]"
+      />-->
     </main>
+    <!-- <AlertComponent /> -->
   </div>
 </template>
 <script>
@@ -35,13 +36,15 @@
 import Sidenav from "./examples/Sidenav";
 import Navbar from "@/examples/Navbars/Navbar.vue";
 import { mapMutations } from "vuex";
+// import AlertComponent from "./views/components/AlertComponent.vue";
 
 export default {
   name: "App",
   components: {
     Sidenav,
-    // Configurator,
     Navbar,
+    // AlertComponent
+    // Configurator,
   },
   methods: {
     ...mapMutations(["toggleConfigurator", "navbarMinimize"])
