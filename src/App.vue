@@ -11,7 +11,14 @@
     />
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
       <!-- navbar -->
-      <navbar />
+      <navbar
+          :class="[navClasses]"
+          :textWhite="
+        this.$store.state.isAbsolute ? 'text-white opacity-8' : 'text-white'
+      "
+          :minNav="navbarMinimize"
+          v-if="this.$store.state.showNavbar"
+      />
       <router-view />
       <configurator
         :toggle="toggleConfigurator"
