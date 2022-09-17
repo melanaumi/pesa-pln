@@ -108,17 +108,58 @@
               </div>
             </div>
             <!-- dropdown filter -->
+            <div style="margin: 1px;">
+              <button
+                class="border-0 rounded-circle bg-white"
+                type="button"
+                id="dropdownFilter"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../assets/img/icons/Filter.png" />
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownFilter" role="menu">
+                <div class="mt-2">
+                  <span style="font-size: 18px;" class="text-dark fw-bold ms-3">Filter</span>
+                  <hr/>
+                </div>
+                <div class="p-2 d-flex">
+                  <a class="dropdown-item" href="/data">
+                    <ArgonRadio style="margin-right: 10px;">Ditugaskan kepada saya</ArgonRadio>
+                  </a>
+                </div>
+                <div class="p-2 d-flex">
+                  <a class="dropdown-item" href="/data">
+                    <ArgonRadio style="margin-right: 10px;">
+                      <img class="me-2" src="../assets/img/icons/semi-deadline.png" />Mendekati deadline
+                    </ArgonRadio>
+                  </a>
+                </div>
+                <div class="p-2 d-flex">
+                  <a class="dropdown-item" href="/data">
+                    <ArgonRadio style="margin-right: 10px;">
+                      <img class="me-2" src="../assets/img/icons/deadline.png" />Terlambat
+                    </ArgonRadio>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <!-- dropdown sort -->
             <div style="margin-top: 1px;">
               <button
                 class="border-0 rounded-circle bg-white"
                 type="button"
-                id="dropdownMenuButton2"
+                id="dropdownSort"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <img class="w-100" src="../assets/img/icons/Filter.png" />
+                <img class="w-100" src="../assets/img/icons/Sort.png" />
               </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2" role="menu">
+              <ul class="dropdown-menu" aria-labelledby="dropdownSort" role="menu">
+                <div class="mt-2">
+                  <span style="font-size: 18px;" class="text-dark fw-bold ms-3">Urutkan</span>
+                  <hr />
+                </div>
                 <div class="p-2 d-flex">
                   <a class="dropdown-item" href="/data">
                     <ArgonRadio style="margin-right: 10px;">Batas Waktu</ArgonRadio>
@@ -150,10 +191,6 @@
                   </a>
                 </div>
               </ul>
-            </div>
-
-            <div style="margin: 10px;">
-              <img src="../assets/img/icons/Sort.png" />
             </div>
 
             <!-- dropdown aktivitas dan delete project -->
@@ -239,11 +276,11 @@
                 class="card"
                 style="background-color: #FFFFFF; border: 1px dashed; border-color: green;"
               >
-                <div class="card-body">
-                  <div class="mb-0 d-flex justify-content-center text-black">
+                <div class="card-body p-1">
+                  <div class="mb-0 d-flex justify-content-center text-black rounded-3">
                     <a
-                      class="dropdown-item"
-                      href="/data"
+                      class="dropdown-item rounded-3"
+                      href="#"
                       data-bs-target="#modal-status"
                       data-bs-toggle="modal"
                     >
@@ -287,7 +324,6 @@
                                   :key="index"
                                 >
                                   <div
-                                    v-if="selectColors !== '#DDDDDD'"
                                     @click="getColorValue(selectColors)"
                                     class="p-4 d-inline-block rounded-circle me-2 roundedCustom position-relative"
                                     :style="{backgroundColor: selectColors}"
@@ -297,18 +333,6 @@
                                       class="position-absolute centered"
                                       src="@/assets/img/icons/check.png"
                                       alt="icon checklist"
-                                    />
-                                  </div>
-                                  <div
-                                    v-else
-                                    @click="moreColor = !moreColor"
-                                    class="p-4 d-inline-block rounded-circle me-2 roundedCustom position-relative"
-                                    :style="{backgroundColor: selectColors, display: moreColor === false ? 'flex' : 'none'}"
-                                  >
-                                    <img
-                                      class="position-absolute centered"
-                                      src="@/assets/img/icons/moreIcon.png"
-                                      alt="icon more"
                                     />
                                   </div>
                                 </div>
@@ -353,13 +377,26 @@ export default {
   name: "profile",
   data() {
     return {
-      showMenu: false
+      showMenu: false,
+      moreColor: false,
+      colorValue: "",
+      selectColor: [
+        "#DDDDDD",
+        "#00A2B9",
+        "#36B37E",
+        "#F3AF00",
+        "#DE350B",
+        "#7039CB",
+      ],
     };
   },
   components: {ArgonButton, ArgonRadio, StatusCard, modalLogoutProject, modalDeleteProject, modalUndangMember},
   methods: {
     openSideBarRiwayatAktifitas()  {
       alert('open to sidebar riwayat aktivitas');
+    },
+    getColorValue(value) {
+      this.colorValue = value;
     }
   },
 
@@ -385,3 +422,19 @@ export default {
   }
 };
 </script>
+<style scoped>
+.centered {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.roundedCustom {
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+.roundedCustom:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.3);
+}
+</style>

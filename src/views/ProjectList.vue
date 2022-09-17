@@ -167,7 +167,7 @@
                       class="btn btn-outline-primary"
                       data-bs-dismiss="modal"
                     >Batal</button>
-                    <button type="button" class="btn btn-primary">Buat Project</button>
+                    <button type="button" class="btn btn-primary">Buat KPI / Project</button>
                   </div>
                 </div>
               </div>

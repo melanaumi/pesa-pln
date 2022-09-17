@@ -65,7 +65,6 @@
                           :key="index"
                       >
                         <div
-                            v-if="selectColors !== '#DDDDDD'"
                             @click="getColorValue(selectColors)"
                             class="p-4 d-inline-block rounded-circle me-2 roundedCustom position-relative"
                             :style="{backgroundColor: selectColors}"
@@ -75,18 +74,6 @@
                               class="position-absolute centered"
                               src="@/assets/img/icons/check.png"
                               alt="icon checklist"
-                          />
-                        </div>
-                        <div
-                            v-else
-                            @click="moreColor = !moreColor"
-                            class="p-4 d-inline-block rounded-circle me-2 roundedCustom position-relative"
-                            :style="{backgroundColor: selectColors, display: moreColor === false ? 'flex' : 'none'}"
-                        >
-                          <img
-                              class="position-absolute centered"
-                              src="@/assets/img/icons/moreIcon.png"
-                              alt="icon more"
                           />
                         </div>
                       </div>
@@ -587,12 +574,12 @@ export default {
       moreColor: false,
       colorValue: "",
       selectColor: [
+        "#DDDDDD",
         "#00A2B9",
         "#36B37E",
         "#F3AF00",
         "#DE350B",
         "#7039CB",
-        "#DDDDDD"
       ]
     };
   },
@@ -611,3 +598,19 @@ export default {
   }
 };
 </script>
+<style scoped>
+.centered {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.roundedCustom {
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+.roundedCustom:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.3);
+}
+</style>
