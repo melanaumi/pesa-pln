@@ -16,28 +16,105 @@
         <div class="p-3">
           <div class="row gx-4">
             <div class="col-auto">
+              <!-- not hover -->
               <div
-                class="avatar avatar-xxl avatar-size-50 position-relative"
-                style="background-color: #B3E4EA;"
+                id="palletWarna"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+                class="avatar avatar-xxl avatar-size-50 position-relative roundedCustom"
+                style="background-color: #B3E4EA; cursor: pointer;"
               >
+                <div
+                  class="avatar avatar-xxl avatar-size-50 position-absolute hoverEdit"
+                  style="background-color: rgba(255, 255, 255, .6); cursor: pointer;"
+                >
+                  <img
+                    class="hoverImage"
+                    style="width: 35px;"
+                    src="../assets/img/icons/edit-avatar.png"
+                    alt="icon edit"
+                  />
+                </div>
                 <p
+                  class="hoverText"
                   style="font-size: 20pt; font-weight: bolder; margin-top: 15px; color: #246997;"
                 >UU</p>
               </div>
+              <palletColor />
             </div>
-            <div class="col-auto my-auto">
+            <div class="col-8 my-auto">
               <div class="h-100">
-                <span class="badge badge-xl bg-gradient-success text-white">TUPOKSI</span>
-                <h4 class="mb-3 mt-2 text-white">
-                  Sayo Kravits &nbsp;
-                  <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                </h4>
+                <!-- dropdown edit tipe project -->
+                <span
+                  id="dropdownEditTipeProject"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  class="badge badge-xl bg-gradient-success text-white mx-2"
+                  style="cursor: pointer; text-transform: none;"
+                >{{tipeProjectValue}}</span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownEditTipeProject" role="menu">
+                  <div
+                    class="p-2 d-flex"
+                    v-for="(setTipeProject, index) in  tipeProject"
+                    :key="index"
+                  >
+                    <a
+                      class="dropdown-item fw-bold"
+                      style="cursor: pointer;"
+                      @click="getTipeProjectValue(setTipeProject)"
+                    >{{setTipeProject}}</a>
+                  </div>
+                </ul>
+                <!-- end dropdown -->
+                <div class="mt-1 mb-4 d-flex text-white justify-content-start align-items-center">
+                  <div class="w-40">
+                    <input
+                      id="hideborder"
+                      class="form-control text-white"
+                      type="text"
+                      value="UX / UI Design"
+                    />
+                  </div>&nbsp;
+                  <div
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                    style="cursor: pointer;"
+                    @click="showDes = !showDes"
+                  >
+                    <i
+                      :class="showDes === true ? 'fas fa-chevron-down' : 'fas fa-chevron-up'"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+                <div
+                  :class="showDes === true ? 'colapse d-inline' : 'd-inline colapse d-none'"
+                  id="collapseExample"
+                >
+                  <textarea
+                    class="form-control"
+                    rows="4"
+                    v-model="deskripsiValue"
+                    id="hideborderTextArea"
+                  ></textarea>
+                </div>
                 <p
                   class="mb-0 mt-3 col-lg-12 col-md-12 my-sm-auto ms-sm-auto me-sm-0 font-weight-bold text-sm"
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                <p class="mb-0 mt-2 font-weight-bold text-sm text-info">
+                ></p>
+                <p
+                  v-if="showDes"
+                  @click="showDesMore = !showDesMore"
+                  style="cursor: pointer;"
+                  class="mb-0 mt-2 mx-2 font-weight-bold text-sm text-info"
+                >
                   Tampilkan Lebih Banyak &nbsp;
-                  <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                  <i
+                    :class="showDesMore === true ? 'fas fa-chevron-down' : 'fas fa-chevron-up'"
+                    aria-hidden="true"
+                  ></i>
                 </p>
               </div>
             </div>
@@ -121,7 +198,7 @@
               <ul class="dropdown-menu" aria-labelledby="dropdownFilter" role="menu">
                 <div class="mt-2">
                   <span style="font-size: 18px;" class="text-dark fw-bold ms-3">Filter</span>
-                  <hr/>
+                  <hr />
                 </div>
                 <div class="p-2 d-flex">
                   <a class="dropdown-item" href="/data">
@@ -370,6 +447,7 @@ import ArgonRadio from "../components/ArgonRadio";
 import modalLogoutProject from "@/views/components/modalLogoutProject.vue";
 import modalDeleteProject from "@/views/components/modalDeleteProject.vue";
 import modalUndangMember from "@/views/components/modalUndangMember.vue";
+import palletColor from "./components/palletColor.vue";
 
 const body = document.getElementsByTagName("body")[0];
 
@@ -378,8 +456,11 @@ export default {
   data() {
     return {
       showMenu: false,
+      showDes: true,
+      showDesMore: false,
       moreColor: false,
       colorValue: "",
+      tipeProjectValue: "TUPOKSI",
       selectColor: [
         "#DDDDDD",
         "#00A2B9",
@@ -388,16 +469,21 @@ export default {
         "#DE350B",
         "#7039CB",
       ],
+      tipeProject: ["KPI","TUPOKSI","Lainnya"],
+      deskripsiValue: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
     };
   },
-  components: {ArgonButton, ArgonRadio, StatusCard, modalLogoutProject, modalDeleteProject, modalUndangMember},
+  components: {ArgonButton, ArgonRadio, StatusCard, modalLogoutProject, modalDeleteProject, modalUndangMember, palletColor},
   methods: {
     openSideBarRiwayatAktifitas()  {
       alert('open to sidebar riwayat aktivitas');
     },
     getColorValue(value) {
       this.colorValue = value;
-    }
+    },
+    getTipeProjectValue(value) {
+      this.tipeProjectValue = value;
+    },
   },
 
   mounted() {
@@ -430,11 +516,42 @@ export default {
   left: 0;
   right: 0;
 }
+.hoverEdit {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
 .roundedCustom {
   transition: box-shadow 0.3s;
   cursor: pointer;
 }
-.roundedCustom:hover {
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.3);
+.roundedCustom:hover > .hoverEdit {
+  box-shadow: 0 0 5px rgba(33, 33, 33, 0.3);
+  visibility: visible;
+  opacity: 1;
+}
+#hideborder {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background-color: transparent;
+  color: white;
+  font-size: 28px;
+}
+#hideborder:focus {
+  background-color: rgb(255, 255, 255, 0.1);
+}
+#hideborderTextArea {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background-color: transparent;
+  resize: none !important;
+}
+#hideborderTextArea:focus {
+  border: 1px solid rgb(170, 170, 170);
+  resize: none !important;
 }
 </style>
