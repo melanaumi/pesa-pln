@@ -46,29 +46,36 @@
               :class="showMenu ? 'show' : ''"
               aria-labelledby="dropdownMenuButton"
             >
+              <div class="mt-2">
+                <span style="font-size: 14px;" class="text-dark fw-bold ms-3">Notifikasi</span>
+                <hr />
+              </div>
               <li class="mb-2">
-                 <div class="mt-2">
-                  <span style="font-size: 18px;" class="text-dark fw-bold ms-3">Notifikasi</span>
-                  <hr />
-                </div>
                 <a class="dropdown-item border-radius-md" href="javascript:;">
                   <div class="py-1 d-flex">
-                    <div class="my-auto">
-                      <img
-                        src="../../assets/img/team-2.jpg"
-                        class="avatar avatar-sm me-3"
-                        alt="user image"
-                      />
+                    <div class="">
+                        <a
+                            href="javascript:;"
+                            class="border-0 avatar avatar-sm rounded-circle me-3"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            style="background-color: #a5c3c7; font-weight: bolder;"
+                        >
+                          UX
+                        </a>
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                       <h6 class="mb-1 text-sm font-weight-normal">
-                        <span class="font-weight-bold">New message</span> from
-                        Laur
+                        <span class="font-weight-bold">Jhon</span> komentar dalam
+                        <span class="font-weight-bold" style="color: #00A2B9;">Nama Task</span>
                       </h6>
                       <p class="mb-0 text-xs text-secondary">
                         <i class="fa fa-clock me-1"></i>
-                        13 minutes ago
+                        09:29 WIB
                       </p>
+                      <div class="card border-radius-sm mt-2" style="background-color: #00A2B9;">
+                        <p class="text-white" style="margin-right: 10px; margin-left: 10px; margin-top: 10px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                      </div>
                     </div>
                   </div>
                 </a>
@@ -76,22 +83,34 @@
               <li class="mb-2">
                 <a class="dropdown-item border-radius-md" href="javascript:;">
                   <div class="py-1 d-flex">
-                    <div class="my-auto">
-                      <img
-                        src="../../assets/img/small-logos/logo-spotify.svg"
-                        class="avatar avatar-sm bg-gradient-dark me-3"
-                        alt="logo spotify"
-                      />
+                    <div class="">
+                      <a
+                          href="javascript:;"
+                          class="border-0 avatar avatar-sm rounded-circle me-3"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          style="background-color: #ce6e69; font-weight: bolder;"
+                      >
+                        UI
+                      </a>
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                       <h6 class="mb-1 text-sm font-weight-normal">
-                        <span class="font-weight-bold">New album</span> by
-                        Travis Scott
+                        <span class="font-weight-bold">Pegawai A</span> mengundang anda pada project
+                        <span class="font-weight-bold" style="color: #00A2B9;">UI UX Design</span>
                       </h6>
                       <p class="mb-0 text-xs text-secondary">
                         <i class="fa fa-clock me-1"></i>
-                        1 day
+                        13 Jul 18:29 WIB
                       </p>
+                      <div class="mt-2">
+                        <button class="btn btn-outline-primary m-1">
+                          Tolak
+                        </button>
+                        <button class="btn btn-primary m-1">
+                          Terima
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </a>
@@ -99,49 +118,41 @@
               <li>
                 <a class="dropdown-item border-radius-md" href="javascript:;">
                   <div class="py-1 d-flex">
-                    <div class="my-auto avatar avatar-sm bg-gradient-secondary me-3">
-                      <svg
-                        width="12px"
-                        height="12px"
-                        viewBox="0 0 43 36"
-                        version="1.1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                      >
-                        <title>credit-card</title>
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                          <g
-                            transform="translate(-2169.000000, -745.000000)"
-                            fill="#FFFFFF"
-                            fill-rule="nonzero"
-                          >
-                            <g transform="translate(1716.000000, 291.000000)">
-                              <g transform="translate(453.000000, 454.000000)">
-                                <path
-                                  class="color-background"
-                                  d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
-                                  opacity="0.593633743"
-                                />
-                                <path
-                                  class="color-background"
-                                  d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"
-                                />
-                              </g>
-                            </g>
-                          </g>
-                        </g>
-                      </svg>
+                    <div class="">
+                      <img
+                        src="../../assets/img/small-logos/logo-spotify.svg"
+                        class="border-0 avatar avatar-sm rounded-circle me-3"
+                        alt="logo spotify"
+                      />
                     </div>
                     <div class="d-flex flex-column justify-content-center">
-                      <h6 class="mb-1 text-sm font-weight-normal">Payment successfully completed</h6>
-                      <p class="mb-0 text-xs text-secondary">
+                      <h6 class="mb-1 text-sm font-weight-normal">
+                        <span class="font-weight-bold">Mike</span> mengubah tanggal selesai pekerjaan
+                        <span class="font-weight-bold" style="color: #00A2B9;">Final Design Halaman Utama</span>
+                      </h6>
+                      <div class="card border-radius-sm" style="border: 0.3px solid grey;">
+                        <p class="mb-0 text-sm text-secondary mb-2 mt-2" style="margin-left: 10px; margin-right: 10px;">
+                          03 Agustus 2022 10:00 WIB &nbsp; <span class="text-dark" style="font-weight: bolder;"><i class="fas fa-arrow-right" /> &nbsp; 05 Agustus 2022</span>
+                        </p>
+                      </div>
+                      <p class="mb-0 mt-2 text-xs text-secondary">
                         <i class="fa fa-clock me-1"></i>
-                        2 days
+                        14 Jul 09:30 WIB
                       </p>
                     </div>
                   </div>
                 </a>
               </li>
+
+              <hr />
+              <div class="d-flex justify-content-between mt-2">
+                <di>
+                  <span style="font-size: 10px; color: #00A2B9;" class="fw-bold ms-3">Tandai Semua Telah Dibaca</span>
+                </di>
+                <di>
+                  <span style="font-size: 10px; color: #00A2B9;" class="fw-bold ms-3">Lihat Semua</span>
+                </di>
+              </div>
             </ul>
           </li>
           <li class="dropdown">
@@ -161,7 +172,7 @@
           <ul class="dropdown-menu dropdown-menu-end" :class="showLogout ? 'show' : ''" aria-labelledby="dropdownLogout">
             <button class="p-1 d-flex align-items-center dropdown-item" @click="logOut()">
               <div class="mx-3">
-                <button type="button" class="dropdown-item text-dark">Log out</button>
+                <button type="button" class="dropdown-item text-dark"><i class="fa fa-sign-out"/> &nbsp;Log Out</button>
               </div>
             </button>
           </ul>

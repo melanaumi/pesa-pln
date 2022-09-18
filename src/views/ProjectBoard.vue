@@ -104,6 +104,7 @@
                 <p
                   class="mb-0 mt-3 col-lg-12 col-md-12 my-sm-auto ms-sm-auto me-sm-0 font-weight-bold text-sm"
                 ></p>
+
                 <p
                   v-if="showDes"
                   @click="showDesMore = !showDesMore"
