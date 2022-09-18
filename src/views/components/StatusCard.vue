@@ -434,7 +434,7 @@
         <li
             class="list-group-item border-0 d-flex p-4 mb-3 border-radius-lg bg-white"
             href="/data"
-            data-bs-target="#modal-edit-task"
+            data-bs-target="#modal-detail-task"
             data-bs-toggle="modal"
         >
           <div class="d-flex flex-column">
@@ -478,13 +478,6 @@
                         style="width: 10px;"
                     /> 10
                   </a>&nbsp;&nbsp;&nbsp;
-                  <i
-                      class="fa fa-eye text-black-50"
-                      aria-hidden="true"
-                      href="/data"
-                      data-bs-target="#modal-detail-task"
-                      data-bs-toggle="modal"
-                  ></i>
                 </div>
               </li>
             </ul>
@@ -494,7 +487,7 @@
         <li
             class="list-group-item border-0 d-flex p-4 mb-3 border-radius-lg bg-white"
             href="/data"
-            data-bs-target="#modal-add-task"
+            data-bs-target="#modal-detail-task"
             data-bs-toggle="modal"
         >
           <div class="d-flex flex-column">
@@ -538,7 +531,7 @@
                         style="width: 10px;"
                     /> 10
                   </a>&nbsp;&nbsp;&nbsp;
-                  <i class="fa fa-eye text-black-50" aria-hidden="true"></i>
+
                 </div>
               </li>
             </ul>
