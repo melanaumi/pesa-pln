@@ -284,7 +284,7 @@
               <ul class="dropdown-menu" aria-labelledby="dropdownAktivitas" role="menu">
                 <button
                   class="p-1 d-flex align-items-center dropdown-item"
-                  @click="openSideBarRiwayatAktifitas()"
+                  @click="showRiwayat = !showRiwayat"
                 >
                   <div class="position-absolute mx-1">
                     <img style src="../assets/img/icons/aktivitas_dropdown.png" />
@@ -337,7 +337,12 @@
           <modalDeleteProject />
           <!-- modal undang member -->
           <modalUndangMember />
-
+          <!-- side riwayat aktivitas-->
+          <RiwayatAktivitasSide
+            :toggle="showRiwayat"
+            :class="[showRiwayat ? 'show' : '']"
+            @clicked="onClickChild"
+          />
           <div class="row mt-3">
             <div class="col-md-3">
               <status-card />
@@ -448,6 +453,8 @@ import modalLogoutProject from "@/views/components/modalLogoutProject.vue";
 import modalDeleteProject from "@/views/components/modalDeleteProject.vue";
 import modalUndangMember from "@/views/components/modalUndangMember.vue";
 import palletColor from "./components/palletColor.vue";
+import { mapMutations } from "vuex";
+import RiwayatAktivitasSide from "../examples/RiwayatAktivitasComp.vue"
 
 const body = document.getElementsByTagName("body")[0];
 
@@ -455,6 +462,7 @@ export default {
   name: "profile",
   data() {
     return {
+      showRiwayat: false,
       showMenu: false,
       showDes: true,
       showDesMore: false,
@@ -473,8 +481,12 @@ export default {
       deskripsiValue: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
     };
   },
-  components: {ArgonButton, ArgonRadio, StatusCard, modalLogoutProject, modalDeleteProject, modalUndangMember, palletColor},
+  components: {RiwayatAktivitasSide, ArgonButton, ArgonRadio, StatusCard, modalLogoutProject, modalDeleteProject, modalUndangMember, palletColor},
   methods: {
+    ...mapMutations(["toggleConfigurator", "navbarMinimize"]),
+    onClickChild (value) {
+      this.showRiwayat = value;
+    },
     openSideBarRiwayatAktifitas()  {
       alert('open to sidebar riwayat aktivitas');
     },
