@@ -182,7 +182,7 @@
                 <span class="input-group-text text-body">
                   <i class="fas fa-search" aria-hidden="true"></i>
                 </span>
-                <input type="text" class="form-control" :placeholder="'Cari Pekerjaan ...'" />
+                <input type="text" class="form-control" :placeholder="'Cari pekerjaan'" />
               </div>
             </div>
             <!-- dropdown filter -->
