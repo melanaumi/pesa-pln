@@ -6,15 +6,70 @@
         <div class="row">
           <div class="col-lg-7">
             <list-task-card />
+            <div class="row mt-5">
+              <div class="col-lg-12 mb-lg">
+                <!-- line chart -->
+                <div class="card z-index-2">
+                  <div class="card">
+                    <div class="pb-0 card-header mb-0 d-flex justify-content-between">
+                      <h6>Riwayat Aktivitas</h6>
+                      <span
+                        @click="toDetailRiwayatActivity()"
+                        style="cursor:pointer;"
+                        class="text-primary"
+                      >Lihat Semua</span>
+                    </div>
+                    <div class="p-4 card-body scroll">
+                      <div
+                        class="d-flex p-1"
+                        v-for="(stateRiwayats, index)  in  stateRiwayat"
+                        :key="index"
+                      >
+                        <div class="me-2">
+                          <li class="border-0 avatar avatar-sm rounded-circle bg-primary">
+                            <p style="margin-top: 15px; font-size: 1rem; font-weight: 700;">UU</p>
+                          </li>
+                        </div>
+                        <div>
+                          <p class="p-0 m-0 fw-bold text-dark">
+                            {{stateRiwayats.name}}
+                            <span
+                              class="fw-normal text-dark"
+                              style="font-size: 15px;"
+                            >&nbsp;{{stateRiwayats.aktifitas}}&nbsp;</span>
+                            <span
+                              class="fw-normal text-primary fw-bold"
+                            >{{stateRiwayats.name_pekerjaan}}</span>
+                          </p>
+                          <p style="font-size: 13px;">{{stateRiwayats.jam}}</p>
+                          <p
+                            v-if="stateRiwayats.content_aktivitas_start  !== ''"
+                            style="font-size: 15px; border: 1px solid gray; border-radius: 10px;"
+                            class="text-dark p-2"
+                          >
+                            {{stateRiwayats.content_aktivitas_start}}&nbsp;
+                            <i
+                              class="bi bi-arrow-right"
+                            ></i>&nbsp;
+                            <span>{{stateRiwayats.content_aktivitas_end}}</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="col-lg-5">
             <div class="card">
               <div class="p-3 pb-0 card-header">
                 <h6 class="mb-0 text-black-50">Kalender</h6>
-                <h6 class="mb-0">Selasa, 1 Maret 2022
+                <h6 class="mb-0">
+                  Selasa, 1 Maret 2022
                   <button
-                      class="my-auto btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right"
+                    class="my-auto btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right"
                   >
                     <i class="ni ni-bold-down" aria-hidden="true"></i>
                   </button>
@@ -25,46 +80,48 @@
                   <h6 style="color: #00A2B9;" class="text-center">Hari Ini</h6>
                   <h6 class="text-center" style="font-size: 25px; color: #00A2B9;">1</h6>
                 </div>
-                <div
-                    class="col-lg-9"
-                    data-bs-target="#modal-del-task"
-                    data-bs-toggle="modal"
-                >
-                  <div class="card border-radius-sm" style="background-color: #add6dc; border-left-width: thick; border-left-color: #00A2B9;">
+                <div class="col-lg-9" data-bs-target="#modal-del-task" data-bs-toggle="modal">
+                  <div
+                    class="card border-radius-sm"
+                    style="background-color: #add6dc; border-left-width: thick; border-left-color: #00A2B9;"
+                  >
                     <div class="mt-3 mb-1 mx-1">
                       <div class="d-flex justify-content-between mt-2 mx-3">
                         <div>
-                          <h6> Final Design Halaman Utama</h6>
+                          <h6>Final Design Halaman Utama</h6>
                           <p>UI UX Design</p>
                         </div>
                         <div class="mt-2">
                           <a
-                              href="javascript:;"
-                              class="border-0 avatar avatar-sm rounded-circle"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="UI UX Design"
-                              style="background-color: #00A2B9; font-weight: bold;"
+                            href="javascript:;"
+                            class="border-0 avatar avatar-sm rounded-circle"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="UI UX Design"
+                            style="background-color: #00A2B9; font-weight: bold;"
                           >UU</a>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="card border-radius-sm mt-2" style="background-color: #add6dc; border-left-width: thick; border-left-color: #f5b40d;">
+                  <div
+                    class="card border-radius-sm mt-2"
+                    style="background-color: #add6dc; border-left-width: thick; border-left-color: #f5b40d;"
+                  >
                     <div class="mt-3 mb-1 mx-1">
                       <div class="d-flex justify-content-between mt-2 mx-3">
                         <div>
-                          <h6> Final Design Halaman Utama</h6>
+                          <h6>Final Design Halaman Utama</h6>
                           <p>UI UX Design</p>
                         </div>
                         <div class="mt-2">
                           <a
-                              href="javascript:;"
-                              class="border-0 avatar avatar-sm rounded-circle"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="UI UX Design"
-                              style="background-color: #00A2B9; font-weight: bold;"
+                            href="javascript:;"
+                            class="border-0 avatar avatar-sm rounded-circle"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="UI UX Design"
+                            style="background-color: #00A2B9; font-weight: bold;"
                           >UU</a>
                         </div>
                       </div>
@@ -78,11 +135,14 @@
                   <h6 class="text-center" style="font-size: 25px; color: #676b6e;">2</h6>
                 </div>
                 <div class="col-lg-9">
-                  <div class="card border-radius-sm" style="background-color: #babdbe; border-left-width: thick; border-left-color: #4d5154;">
+                  <div
+                    class="card border-radius-sm"
+                    style="background-color: #babdbe; border-left-width: thick; border-left-color: #4d5154;"
+                  >
                     <div class="mt-3 mb-1 mx-1">
                       <div class="d-flex justify-content-between mt-2 mb-2 mx-3">
                         <div>
-                          <h6> Tidak Ada Pekerjaan</h6>
+                          <h6>Tidak Ada Pekerjaan</h6>
                         </div>
                       </div>
                     </div>
@@ -95,41 +155,47 @@
                   <h6 class="text-center" style="font-size: 25px; color: #676b6e;">3</h6>
                 </div>
                 <div class="col-lg-9">
-                  <div class="card border-radius-sm" style="background-color: #add6dc; border-left-width: thick; border-left-color: #00A2B9;">
+                  <div
+                    class="card border-radius-sm"
+                    style="background-color: #add6dc; border-left-width: thick; border-left-color: #00A2B9;"
+                  >
                     <div class="mt-3 mb-1 mx-1">
                       <div class="d-flex justify-content-between mt-2 mx-3">
                         <div>
-                          <h6> Final Design Halaman Utama</h6>
+                          <h6>Final Design Halaman Utama</h6>
                           <p>UI UX Design</p>
                         </div>
                         <div class="mt-2">
                           <a
-                              href="javascript:;"
-                              class="border-0 avatar avatar-sm rounded-circle"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="UI UX Design"
-                              style="background-color: #00A2B9; font-weight: bold;"
+                            href="javascript:;"
+                            class="border-0 avatar avatar-sm rounded-circle"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="UI UX Design"
+                            style="background-color: #00A2B9; font-weight: bold;"
                           >UU</a>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="card border-radius-sm mt-2" style="background-color: #add6dc; border-left-width: thick; border-left-color: #f5b40d;">
+                  <div
+                    class="card border-radius-sm mt-2"
+                    style="background-color: #add6dc; border-left-width: thick; border-left-color: #f5b40d;"
+                  >
                     <div class="mt-3 mb-1 mx-1">
                       <div class="d-flex justify-content-between mt-2 mx-3">
                         <div>
-                          <h6> Final Design Halaman Utama</h6>
+                          <h6>Final Design Halaman Utama</h6>
                           <p>UI UX Design</p>
                         </div>
                         <div class="mt-2">
                           <a
-                              href="javascript:;"
-                              class="border-0 avatar avatar-sm rounded-circle"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="UI UX Design"
-                              style="background-color: #00A2B9; font-weight: bold;"
+                            href="javascript:;"
+                            class="border-0 avatar avatar-sm rounded-circle"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="UI UX Design"
+                            style="background-color: #00A2B9; font-weight: bold;"
                           >UU</a>
                         </div>
                       </div>
@@ -143,41 +209,47 @@
                   <h6 class="text-center" style="font-size: 25px; color: #676b6e;">4</h6>
                 </div>
                 <div class="col-lg-9">
-                  <div class="card border-radius-sm" style="background-color: #add6dc; border-left-width: thick; border-left-color: #00A2B9;">
+                  <div
+                    class="card border-radius-sm"
+                    style="background-color: #add6dc; border-left-width: thick; border-left-color: #00A2B9;"
+                  >
                     <div class="mt-3 mb-1 mx-1">
                       <div class="d-flex justify-content-between mt-2 mx-3">
                         <div>
-                          <h6> Final Design Halaman Utama</h6>
+                          <h6>Final Design Halaman Utama</h6>
                           <p>UI UX Design</p>
                         </div>
                         <div class="mt-2">
                           <a
-                              href="javascript:;"
-                              class="border-0 avatar avatar-sm rounded-circle"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="UI UX Design"
-                              style="background-color: #00A2B9; font-weight: bold;"
+                            href="javascript:;"
+                            class="border-0 avatar avatar-sm rounded-circle"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="UI UX Design"
+                            style="background-color: #00A2B9; font-weight: bold;"
                           >UU</a>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="card border-radius-sm mt-2" style="background-color: #add6dc; border-left-width: thick; border-left-color: #f5b40d;">
+                  <div
+                    class="card border-radius-sm mt-2"
+                    style="background-color: #add6dc; border-left-width: thick; border-left-color: #f5b40d;"
+                  >
                     <div class="mt-3 mb-1 mx-1">
                       <div class="d-flex justify-content-between mt-2 mx-3">
                         <div>
-                          <h6> Final Design Halaman Utama</h6>
+                          <h6>Final Design Halaman Utama</h6>
                           <p>UI UX Design</p>
                         </div>
                         <div class="mt-2">
                           <a
-                              href="javascript:;"
-                              class="border-0 avatar avatar-sm rounded-circle"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="top"
-                              title="UI UX Design"
-                              style="background-color: #00A2B9; font-weight: bold;"
+                            href="javascript:;"
+                            class="border-0 avatar avatar-sm rounded-circle"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="UI UX Design"
+                            style="background-color: #00A2B9; font-weight: bold;"
                           >UU</a>
                         </div>
                       </div>
@@ -196,17 +268,17 @@
               <!-- modal header -->
               <div class="modal-header-delete justify-content-end mt-4">
                 <i
-                    style="margin-top: -20px;"
-                    type="button"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                    class="bi bi-x-lg"
+                  style="margin-top: -20px;"
+                  type="button"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  class="bi bi-x-lg"
                 ></i>
               </div>
               <!-- modal body -->
               <div class="modal-body text-center">
-                <img src="../assets/img/icons/delpro.png">
-                <h3 class="mt-3"> Oops, Pekerjaan Ini Telah Dihapus.</h3>
+                <img src="../assets/img/icons/delpro.png" />
+                <h3 class="mt-3">Oops, Pekerjaan Ini Telah Dihapus.</h3>
                 <p>Kamu tidak dapat melihat detail pekerjaan yang telah dihapus.</p>
               </div>
               <div class="modal-footer-delete justify-content-center">
@@ -221,17 +293,17 @@
               <!-- modal header -->
               <div class="modal-header-delete justify-content-end mt-4">
                 <i
-                    style="margin-top: -20px;"
-                    type="button"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                    class="bi bi-x-lg"
+                  style="margin-top: -20px;"
+                  type="button"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  class="bi bi-x-lg"
                 ></i>
               </div>
               <!-- modal body -->
               <div class="modal-body text-center">
-                <img src="../assets/img/icons/delpro.png">
-                <h3 class="mt-3"> Oops, KPI / Project Ini Telah Dihapus.</h3>
+                <img src="../assets/img/icons/delpro.png" />
+                <h3 class="mt-3">Oops, KPI / Project Ini Telah Dihapus.</h3>
                 <p>Kamu tidak dapat melihat detail KPI / Project yang telah dihapus.</p>
               </div>
               <div class="modal-footer-delete justify-content-center">
@@ -241,58 +313,6 @@
           </div>
         </div>
 
-        <div class="row mt-4 mb-4">
-          <div class="col-lg-7 mb-lg">
-            <!-- line chart -->
-            <div class="card z-index-2">
-              <div class="card">
-                <div class="pb-0 card-header mb-0 d-flex justify-content-between">
-                  <h5>Riwayat Aktivitas</h5>
-                  <span
-                    @click="toDetailRiwayatActivity()"
-                    style="cursor:pointer;"
-                    class="text-primary"
-                  >Lihat Semua</span>
-                </div>
-                <div class="p-4 card-body scroll">
-                  <div
-                    class="d-flex p-1"
-                    v-for="(stateRiwayats, index)  in  stateRiwayat"
-                    :key="index"
-                  >
-                    <div class="me-2">
-                      <li class="border-0 avatar avatar-sm rounded-circle bg-primary">
-                        <p style="margin-top: 15px; font-size: 1rem; font-weight: 700;">UU</p>
-                      </li>
-                    </div>
-                    <div>
-                      <p class="p-0 m-0 fw-bold text-dark">
-                        {{stateRiwayats.name}}
-                        <span
-                          class="fw-normal text-dark"
-                          style="font-size: 15px;"
-                        >&nbsp;{{stateRiwayats.aktifitas}}&nbsp;</span>
-                        <span
-                          class="fw-normal text-primary fw-bold"
-                        >{{stateRiwayats.name_pekerjaan}}</span>
-                      </p>
-                      <p style="font-size: 13px;">{{stateRiwayats.jam}}</p>
-                      <p
-                        v-if="stateRiwayats.content_aktivitas_start  !== ''"
-                        style="font-size: 15px; border: 1px solid gray; border-radius: 10px;"
-                        class="text-dark p-2"
-                      >
-                        {{stateRiwayats.content_aktivitas_start}}&nbsp;
-                        <i class="bi bi-arrow-right"></i>&nbsp;
-                        <span>{{stateRiwayats.content_aktivitas_end}}</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -481,7 +501,7 @@ export default {
 </script>
 <style scoped>
 .scroll {
-  max-height: 500px;
+  max-height: 700px;
   overflow-y: auto;
 }
 ::-webkit-scrollbar-track {

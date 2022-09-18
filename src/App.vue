@@ -21,13 +21,6 @@
         v-if="this.$store.state.showNavbar"
       />
       <router-view />
-      <!-- <configurator
-        :toggle="toggleConfigurator"
-        :class="[
-        this.$store.state.showConfig ? 'show' : '',
-        this.$store.state.hideConfigButton ? 'd-none' : ''
-        ]"
-      />-->
     </main>
     <!-- <AlertComponent /> -->
   </div>
@@ -45,7 +38,6 @@ export default {
     Sidenav,
     Navbar,
     // AlertComponent
-    // Configurator,
   },
   methods: {
     ...mapMutations(["toggleConfigurator", "navbarMinimize"])
