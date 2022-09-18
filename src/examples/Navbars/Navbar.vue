@@ -150,7 +150,11 @@
                   <span style="font-size: 10px; color: #00A2B9;" class="fw-bold ms-3">Tandai Semua Telah Dibaca</span>
                 </di>
                 <di>
-                  <span style="font-size: 10px; color: #00A2B9;" class="fw-bold ms-3">Lihat Semua</span>
+                  <span
+                      @click="toAllNotif()"
+                      style="cursor:pointer; font-size: 10px; color: #00A2B9;"
+                      class="fw-bold ms-3"
+                  >Lihat Semua</span>
                 </di>
               </div>
             </ul>
@@ -208,6 +212,9 @@ export default {
     },
     logOut() {
       this.$router.push({ name: 'Signup' })
+    },
+    toAllNotif(){
+      this.$router.push({name: 'AllNotif'})
     }
   },
   components: {

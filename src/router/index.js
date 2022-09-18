@@ -1,16 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
-// import Dashboard from "../views/Dashboard.vue";
 import Signup from "../views/Signup.vue";
 import Dashboard1 from "../views/Dashboard1.vue";
 import Project from "../views/ProjectList.vue";
 import ProjectBoard from "../views/ProjectBoard.vue";
 import RiwayatAktifitas from "../views/RiwayatAktifitas.vue";
-// import Tables from "../views/Tables.vue";
-// import Billing from "../views/Billing.vue";
-// import VirtualReality from "../views/VirtualReality.vue";
-// import RTL from "../views/Rtl.vue";
-// import Profile from "../views/Profile.vue";
-// import Signin from "../views/Signin.vue";
+import AllNotif from "../views/AllNotif.vue";
+
 const routes = [
   {
     path: "/",
@@ -42,41 +37,11 @@ const routes = [
     name: "RiwayatAktifitas",
     component: RiwayatAktifitas,
   },
-  // {
-  //   path: "/dashboard-default",
-  //   name: "Dashboard",
-  //   component: Dashboard,
-  // },
-  // {
-  //   path: "/tables",
-  //   name: "Tables",
-  //   component: Tables,
-  // },
-  // {
-  //   path: "/billing",
-  //   name: "Billing",
-  //   component: Billing,
-  // },
-  // {
-  //   path: "/virtual-reality",
-  //   name: "Virtual Reality",
-  //   component: VirtualReality,
-  // },
-  // {
-  //   path: "/rtl-page",
-  //   name: "RTL",
-  //   component: RTL,
-  // },
-  // {
-  //   path: "/profile",
-  //   name: "Profile",
-  //   component: Profile,
-  // },
-  // {
-  //   path: "/signin",
-  //   name: "Signin",
-  //   component: Signin,
-  // },
+  {
+    path: "/all-notif",
+    name: "AllNotif",
+    component: AllNotif,
+  },
   
 ];
 

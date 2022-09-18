@@ -1,12 +1,13 @@
 <template>
   <div class="py-2 container-fluid">
     <div class="row">
-      <h3 class="mb-4">Dashboard</h3>
+      <h4 class="mb-4">Dashboard</h4>
       <div class="col-lg-12">
         <div class="row">
           <div class="col-lg-7">
             <list-task-card />
           </div>
+
           <div class="col-lg-5">
             <div class="card">
               <div class="p-3 pb-0 card-header">
@@ -240,22 +241,8 @@
           </div>
         </div>
 
-        <div class="row mt-4">
-          <div class="col-lg-7 mb-lg">
-            <!-- line chart -->
-            <div class="card z-index-2">
-             <div class="card">
-               <div class="p-3 pb-0 card-header">
-                 <h6 class="mb-0">Riwayat Aktivitas</h6>
-               </div>
-             </div>
-          <div class="col-lg-12">
-            <categories-card />
-          </div>
-        </div>
-
         <div class="row mt-4 mb-4">
-          <div class="col-lg-12 mb-lg">
+          <div class="col-lg-7 mb-lg">
             <!-- line chart -->
             <div class="card z-index-2">
               <div class="card">
@@ -307,8 +294,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
     </div>
   </div>
 </template>

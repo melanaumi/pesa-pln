@@ -3,7 +3,7 @@
     <div class="p-3 pb-0 card-header">
       <h6 class="mb-0">{{ cardTitle }}</h6>
     </div>
-    <div class="card-body p-3 mb-2">
+    <div class="card-body p-3 mb-2 scroll">
       <div>
         <h4 class="mb-1 text-sm text-dark">
           <button
@@ -40,12 +40,12 @@
 
         <div class="mt-2">
           <div class="d-flex justify-content-between mt-2 mx-3">
-            <di>
+            <div>
               <p style="font-size: 10px;" class="fw-bold ms-3 text-dark">Design Notifikasi dan Tampilan Push Notifikasi</p>
-            </di>
-            <di>
+            </div>
+            <div>
               <span style="font-size: 10px; color: #00A2B9;" class="fw-bold ms-3">15 Jul</span>
-            </di>
+            </div>
           </div>
           <div class="d-flex justify-content-between mx-3">
             <p style="font-size: 10px;" class="ms-3 text-dark">UI UX Design</p>
