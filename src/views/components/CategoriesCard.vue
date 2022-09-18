@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="p-3 pb-0 card-header">
-      <h6 class="mb-0">{{ cardTitle }}</h6>
+      <h5 class="mb-0">{{ cardTitle }}</h5>
     </div>
     <div class="p-3 card-body">
       <ul class="list-group" :class="this.$store.state.isRTL ? 'pe-0' : ''">

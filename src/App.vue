@@ -72,4 +72,22 @@ export default {
 * {
   font-family: "Roboto", sans-serif;
 }
+.scroll {
+  max-height: 500px;
+  overflow-y: auto;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #bdbdbd;
+}
 </style>
