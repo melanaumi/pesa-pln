@@ -33,7 +33,7 @@
                 <div class="modal-content">
                   <!-- modal header -->
                   <div class="modal-header">
-                    <h5 class="modal-title">Buat Project</h5>
+                    <h5 class="modal-title">Buat KPI / Project</h5>
                     <i
                       style="margin-top: -20px;"
                       type="button"
