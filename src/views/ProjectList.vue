@@ -244,7 +244,7 @@ export default {
         ],
         stateSemuaProject: [
         {
-          title: "lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
+          title: "UX UI design",
           iconClass: "",
           detail: "KPI",
           fav: false

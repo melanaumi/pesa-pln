@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-lg-7">
             <list-task-card />
-            <div class="row mt-5">
+            <div class="row mt-4">
               <div class="col-lg-12 mb-lg">
                 <!-- line chart -->
                 <div class="card z-index-2">
