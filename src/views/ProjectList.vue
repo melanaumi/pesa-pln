@@ -47,7 +47,7 @@
                     <form>
                       <!-- nama project -->
                       <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Nama Project</label>
+                        <label for="exampleInputEmail1" class="form-label">Nama KPI / Project</label>
                         <input
                           type="text"
                           class="form-control"
@@ -58,10 +58,10 @@
                       </div>
                       <!-- deskripsi -->
                       <div class="mb-3">
-                        <label for="floatingTextarea2">Deskripsi Project</label>
+                        <label for="floatingTextarea2">Deskripsi KPI / Project</label>
                         <textarea
                           class="form-control"
-                          placeholder="Tulis Deskripsi Project"
+                          placeholder="Tulis Deskripsi KPI / Project"
                           id="floatingTextarea2"
                           style="height: 100px"
                         ></textarea>
@@ -158,7 +158,7 @@
                           </div>
                         </div>
                       </div>
-                      <p>Dengan membuat project, tim dan atasan anda akan automatis terundang ke dalam project.</p>
+                      <p>Dengan membuat KPI / project, tim dan atasan anda akan automatis terundang ke dalam KPI / project.</p>
                     </form>
                   </div>
                   <div class="modal-footer">
