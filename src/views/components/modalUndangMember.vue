@@ -20,11 +20,9 @@
         </div>
         <div class="modal-header-delete">
           <div class="w-100 d-flex justify-content-between align-items-center align-self-center">
-            <div class="input-group w-75">
-              <span class="input-group-text">
-                <i class="fas fa-search" aria-hidden="true"></i>
-              </span>
-              <input type="text" class="form-control" :placeholder="'Cari nama member'" />
+            <div class="search rounded-pill">
+              <i class="fa fa-search"></i>
+              <input type="text" class="form-control" placeholder="Cari nama member" />
             </div>
             <div>
               <argon-button color="primary" size="sm">Undang</argon-button>
@@ -116,5 +114,27 @@ export default {
   right: 15px;
   top: 25px;
   cursor: pointer;
+}
+.search {
+  position: relative;
+  width: 75%;
+}
+
+.search input {
+  text-indent: 25px;
+  border: 1px solid #d6d4d4;
+  border-radius: 20px !important;
+  background-color: rgb(248, 248, 248);
+}
+
+.search input:focus {
+  box-shadow: none;
+  border: 1px solid #00a2b9;
+}
+
+.search .fa-search {
+  position: absolute;
+  top: 13px;
+  left: 15px;
 }
 </style>

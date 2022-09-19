@@ -178,12 +178,10 @@
               <img src="../assets/img/icons/star3.png" />
             </div>
             <div class="pe-md-3 d-flex align-items-center" style="margin: 10px;">
-              <div class="input-group">
-                <span class="input-group-text text-body">
-                  <i class="fas fa-search" aria-hidden="true"></i>
-                </span>
-                <input type="text" class="form-control" :placeholder="'Cari pekerjaan'" />
-              </div>
+              <div class="search rounded-pill">
+            <i class="fa fa-search"></i>
+            <input type="text" class="form-control" placeholder="Cari Pekerjaan" />
+          </div>
             </div>
             <!-- dropdown filter -->
             <div style="margin: 1px;">
@@ -566,5 +564,27 @@ export default {
 #hideborderTextArea:focus {
   border: 1px solid rgb(170, 170, 170);
   resize: none !important;
+}
+.search {
+  position: relative;
+  width: 250px;
+}
+
+.search input {
+  text-indent: 25px;
+  border: 1px solid #d6d4d4;
+  border-radius: 20px !important;
+  background-color: rgb(248, 248, 248);
+}
+
+.search input:focus {
+  box-shadow: none;
+  border: 1px solid #00a2b9;
+}
+
+.search .fa-search {
+  position: absolute;
+  top: 13px;
+  left: 15px;
 }
 </style>

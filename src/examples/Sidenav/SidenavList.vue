@@ -9,7 +9,14 @@
         >
           <template v-slot:icon>
             <img
+              v-if="getRoute() === 'dashboard'"
               src="../../../src/assets/img/logo-dashboard.png"
+              alt="logo dashboard"
+              class="sizeLogo"
+            />
+            <img
+              v-else
+              src="../../../src/assets/img/icons/no-aktif-dashboard.png"
               alt="logo dashboard"
               class="sizeLogo"
             />
@@ -24,6 +31,13 @@
         >
           <template v-slot:icon>
             <img
+            v-if="getRoute() === 'project'"
+            src="../../../src/assets/img/icons/aktif-project.png"
+            alt="logo project"
+            class="sizeLogo"
+            />
+            <img
+              v-else
               src="../../../src/assets/img/logo-project.png"
               alt="logo project"
               class="sizeLogo"

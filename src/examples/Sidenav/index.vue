@@ -1,7 +1,7 @@
 <template>
-  <div v-show="this.$store.state.layout === 'default'" class="min-height-50 position-absolute" />
+  <!-- <div v-show="this.$store.state.layout === 'default'" class="min-height-50 position-absolute" /> -->
   <aside
-    class="overflow-auto border-0 sidenav navbar navbar-vertical navbar-expand-xs"
+    class="overflow-hidden border-1 sidenav navbar navbar-vertical navbar-expand-xs"
     :class="`${
     this.$store.state.isRTL
     ? 'me-3 rotate-caret fixed-end'
@@ -15,18 +15,15 @@
     id="sidenav-main"
   >
     <div class="sidenav-header position-relative">
+      <i
+      class="top-0 p-3 cursor-pointer fas fa-times text-secondary opacity-5 position-absolute end-0 d-none d-xl-none"
+      aria-hidden="true"
+      id="iconSidenav"
+      ></i>
       <!-- sidebar toggle -->
-      <div
-        style="right:0px; z-index: 1; bottom:25px; cursor: pointer;"
-        class="position-absolute rounded-circle shadow"
-      >
+      <div class="position-absolute rounded-circle btnBack">
         <i class="fas fa-chevron-left px-2 py-1" id="header-toggle"></i>
       </div>
-      <i
-        class="top-0 p-3 cursor-pointer fas fa-times text-secondary opacity-5 position-absolute end-0 d-none d-xl-none"
-        aria-hidden="true"
-        id="iconSidenav"
-      ></i>
       <router-link class="m-0 navbar-brand" to="/">
         <img
           :src="
@@ -41,7 +38,7 @@
         <span class="ms-2 font-weight-bold me-2">PESA</span>
       </router-link>
     </div>
-    <hr class="mt-0 horizontal dark" />
+    <!-- <hr class="mt-0 horizontal dark" /> -->
     <sidenav-list :cardBg="custom_class" />
   </aside>
 </template>
@@ -64,3 +61,14 @@ export default {
   props: ["custom_class", "layout"]
 };
 </script>
+<style scoped>
+.btnBack {
+  right: 0px;
+  bottom: 25px;
+  color: grey;
+  cursor: pointer;
+  padding: 1px;
+  border: 1px solid gainsboro;
+  background-color: white;
+}
+</style>

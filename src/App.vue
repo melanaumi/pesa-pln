@@ -45,13 +45,13 @@ export default {
   computed: {
     navClasses() {
       return {
-      //   "position-sticky bg-white left-auto top-2 z-index-sticky":
-      //     this.$store.state.isNavFixed && !this.$store.state.darkMode,
-      //   "position-sticky bg-default left-auto top-2 z-index-sticky":
-      //     this.$store.state.isNavFixed && this.$store.state.darkMode,
-      //   "position-absolute px-4 mx-0 w-100 z-index-2": this.$store.state
-      //     .isAbsolute,
-      //   "px-0 mx-4": !this.$store.state.isAbsolute
+        // "position-sticky bg-white left-auto top-2 z-index-sticky":
+        //   this.$store.state.isNavFixed && !this.$store.state.darkMode,
+        // "position-sticky bg-default left-auto top-2 z-index-sticky":
+        //   this.$store.state.isNavFixed && this.$store.state.darkMode,
+        // "position-absolute px-4 mx-0 w-100 z-index-2": this.$store.state
+        //   .isAbsolute,
+        // "px-0 mx-4": !this.$store.state.isAbsolute
       };
     }
   },
