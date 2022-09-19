@@ -27,12 +27,12 @@
             >
             <i class="text-warning fs-4 bi bi-exclamation-triangle me-3"></i>
             <span>
-              Semua task dan aktivitas yang ada di project ini akan di hapus,
+              Semua pekerjaan dan aktivitas yang ada di KPI / project ini akan di hapus,
               dan anda tidak akan bisa membukanya kembali. Penghapusan ini tidak bisa diundo.
             </span>
             </div>
             <div class="mb-3">
-              <p style="font-size: 15px;">Masukkan nama project untuk konfirmasi project yang ingin Anda hapus</p>
+              <p style="font-size: 15px;">Masukkan nama KPI / project untuk konfirmasi KPI / project yang ingin Anda hapus</p>
               <input
                 type="text"
                 placeholder="Tulis nama project"

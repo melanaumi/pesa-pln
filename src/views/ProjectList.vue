@@ -68,7 +68,7 @@
                       </div>
                       <!-- select tipe project -->
                       <div class="mb-3">
-                        <label for="floatingTextarea2">Tipe project</label>
+                        <label for="floatingTextarea2">Tipe KPI / project</label>
                         <select
                           class="form-select"
                           placeholder="Pilih tipe project"
@@ -244,7 +244,7 @@ export default {
         ],
         stateSemuaProject: [
         {
-          title: "UX UI design",
+          title: "lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
           iconClass: "",
           detail: "KPI",
           fav: false

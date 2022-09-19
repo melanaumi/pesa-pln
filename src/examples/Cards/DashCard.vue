@@ -61,12 +61,12 @@
                     </div>
                   </div>
                 </div>
-                <p>Dengan membuat project, tim dan atasan anda akan automatis terundang ke dalam project.</p>
+                <p>Dengan membuat KPI / project, tim dan atasan anda akan automatis terundang ke dalam KPI / project.</p>
               </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Batal</button>
-              <button type="button" class="btn btn-primary">Buat Project</button>
+              <button type="button" class="btn btn-primary">Buat KPI / Project</button>
             </div>
           </div>
         </div>

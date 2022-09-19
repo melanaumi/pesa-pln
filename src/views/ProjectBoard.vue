@@ -265,7 +265,7 @@
                 </div>
                 <div class="p-2 d-flex">
                   <a class="dropdown-item" href="/data">
-                    <ArgonRadio style="margin-right: 10px;">Nama Task (A - Z)</ArgonRadio>
+                    <ArgonRadio style="margin-right: 10px;">Nama Pekerjaan (A - Z)</ArgonRadio>
                   </a>
                 </div>
               </ul>
@@ -429,7 +429,7 @@
                             class="btn btn-outline-primary"
                             data-bs-dismiss="modal"
                           >Batal</button>
-                          <button type="button" class="btn btn-primary">Buat Project</button>
+                          <button type="button" class="btn btn-primary">Buat KPI / Project</button>
                         </div>
                       </div>
                     </div>

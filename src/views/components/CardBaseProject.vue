@@ -5,11 +5,13 @@
     v-on:mouseleave="mouseOut"
     @click="urlParams()"
   >
-    <div class="p-1 card-body">
+    <div class="p-1 py-2 card-body">
       <div class="d-flex align-items-center position-relative">
         <!-- inisial name Project -->
-        <p class="bg-primary rounded-2 text-white fs-4 p-2 mt-3 ms-2">UU</p>
         <div>
+          <p class="bg-primary rounded-2 text-white fs-4 p-2 mt-3 ms-2">UU</p>
+        </div>
+        <div class="w-70">
           <!-- title -->
           <h6 class="font-weight-bolder ms-3" :class="valueColor">{{ value }}</h6>
           <!-- Tipe Project -->
