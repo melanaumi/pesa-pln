@@ -1,150 +1,312 @@
 <template>
-  <div class="container-fluid">
-    <div class="row mt-4 mb-4">
-      <div class="col-lg-12 mb-lg">
-        <!-- line chart -->
-        <div class="z-index-2">
+  <div class="py-2 container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="d-flex mx-3 me-3">
           <div>
-            <div class="pb-0 mb-2 d-flex justify-content-between">
-              <h5>Riwayat Aktivitas</h5>
-            </div>
-            <div class="p-4 card-body scroll">
-              <p class="fw-bold">Hari ini</p>
-              <div class="d-flex p-1" v-for="(stateRiwayats, index)  in  stateRiwayat" :key="index">
-                <div class="me-2">
-                  <li class="border-0 avatar avatar-sm rounded-circle bg-primary">
-                    <p style="margin-top: 15px; font-size: 1rem; font-weight: 700;">UU</p>
-                  </li>
-                </div>
-                <div>
-                  <p class="p-0 m-0 fw-bold text-dark">
-                    {{stateRiwayats.name}}
-                    <span
-                      class="fw-normal text-dark"
-                      style="font-size: 15px;"
-                    >&nbsp;{{stateRiwayats.aktifitas}}&nbsp;</span>
-                    <span class="fw-normal text-primary fw-bold">{{stateRiwayats.name_pekerjaan}}</span>
-                  </p>
-                  <p style="font-size: 13px;">{{stateRiwayats.jam}}</p>
-                  <p
-                    v-if="stateRiwayats.content_aktivitas_start  !== ''"
-                    style="font-size: 15px; border: 1px solid gray; border-radius: 10px;"
-                    class="text-dark p-2"
-                  >
-                    {{stateRiwayats.content_aktivitas_start}}&nbsp;
-                    <i class="bi bi-arrow-right"></i>&nbsp;
-                    <span>{{stateRiwayats.content_aktivitas_end}}</span>
-                  </p>
-                </div>
+            <h4 class="mb-4">Riwayat Aktivitas</h4>
+          </div>
+        </div>
+        <div class="mb-2 mx-3 me-3 scroll">
+          <p>Hari Ini</p>
+          <div>
+              <div class="mb-2">
+                <a class="dropdown-item border-radius-md" href="javascript:;">
+                  <div class="py-1 d-flex">
+                    <div class="">
+                      <a
+                          href="javascript:;"
+                          class="border-0 avatar avatar-sm rounded-circle me-3 bg-primary"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          style="font-weight: bolder;"
+                      >
+                        UU
+                      </a>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                      <h6 class="mb-1 text-sm font-weight-normal">
+                        <span class="font-weight-bold">Jhon</span> komentar dalam
+                        <span class="font-weight-bold" style="color: #00A2B9;">Nama Task</span>
+                      </h6>
+                      <p class="mb-0 text-xs text-secondary">
+                        <i class="fa fa-clock me-1"></i>
+                        09:29 WIB
+                      </p>
+                      <div class="card border-radius-sm mt-2 bg-transparent" style="border: 1px solid gray;">
+                        <p class="text-dark" style="margin-right: 10px; margin-left: 10px; margin-top: 10px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
-              <p class="fw-bold">Kemarin</p>
-              <div class="d-flex p-1" v-for="(stateRiwayats, index)  in  stateRiwayat" :key="index">
-                <div class="me-2">
-                  <li class="border-0 avatar avatar-sm rounded-circle bg-primary">
-                    <p style="margin-top: 15px; font-size: 1rem; font-weight: 700;">UU</p>
-                  </li>
+              <div class="mb-2">
+                <a class="dropdown-item border-radius-md" href="javascript:;">
+                  <div class="py-1 d-flex">
+                    <div class="">
+                      <a
+                          href="javascript:;"
+                          class="border-0 avatar avatar-sm rounded-circle me-3 bg-primary"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          style="font-weight: bolder;"
+                      >
+                        UU
+                      </a>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                      <h6 class="mb-1 text-sm font-weight-normal">
+                        <span class="font-weight-bold">Jhon</span> mengubah tanggal selesai pekerjaan
+                        <span class="font-weight-bold" style="color: #00A2B9;">Final Design Halaman Utama</span>
+                      </h6>
+                      <div class="card border-radius-sm bg-transparent" style="border: 0.3px solid grey;">
+                        <p class="mb-0 text-sm text-secondary mb-2 mt-2" style="margin-left: 10px; margin-right: 10px;">
+                          03 Agustus 2022 10:00 WIB &nbsp; <span class="text-dark" style="font-weight: bolder;"><i class="fas fa-arrow-right" /> &nbsp; 05 Agustus 2022</span>
+                        </p>
+                      </div>
+                      <p class="mb-0 mt-2 text-xs text-secondary">
+                        <i class="fa fa-clock me-1"></i>
+                        14 Jul 09:30 WIB
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="mb-2">
+              <a class="dropdown-item border-radius-md" href="javascript:;">
+                <div class="py-1 d-flex">
+                  <div class="">
+                    <a
+                        href="javascript:;"
+                        class="border-0 avatar avatar-sm rounded-circle me-3 bg-primary"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        style="font-weight: bolder;"
+                    >
+                      UU
+                    </a>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-1 text-sm font-weight-normal">
+                      <span class="font-weight-bold">Jhon</span> mengubah tanggal selesai pekerjaan
+                      <span class="font-weight-bold" style="color: #00A2B9;">Final Design Halaman Utama</span>
+                    </h6>
+                    <div class="card border-radius-sm bg-transparent" style="border: 0.3px solid grey;">
+                      <p class="mb-0 text-sm text-secondary mb-2 mt-2" style="margin-left: 10px; margin-right: 10px;">
+                        03 Agustus 2022 10:00 WIB &nbsp; <span class="text-dark" style="font-weight: bolder;"><i class="fas fa-arrow-right" /> &nbsp; 05 Agustus 2022</span>
+                      </p>
+                    </div>
+                    <p class="mb-0 mt-2 text-xs text-secondary">
+                      <i class="fa fa-clock me-1"></i>
+                      14 Jul 09:30 WIB
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p class="p-0 m-0 fw-bold text-dark">
-                    {{stateRiwayats.name}}
-                    <span
-                      class="fw-normal text-dark"
-                      style="font-size: 15px;"
-                    >&nbsp;{{stateRiwayats.aktifitas}}&nbsp;</span>
-                    <span class="fw-normal text-primary fw-bold">{{stateRiwayats.name_pekerjaan}}</span>
-                  </p>
-                  <p style="font-size: 13px;">{{stateRiwayats.jam}}</p>
-                  <p
-                    v-if="stateRiwayats.content_aktivitas_start  !== ''"
-                    style="font-size: 15px; border: 1px solid gray; border-radius: 10px;"
-                    class="text-dark p-2"
-                  >
-                    {{stateRiwayats.content_aktivitas_start}}&nbsp;
-                    <i class="bi bi-arrow-right"></i>&nbsp;
-                    <span>{{stateRiwayats.content_aktivitas_end}}</span>
-                  </p>
+              </a>
+            </div>
+          </div>
+
+          <p class="mt-5">Kemarin</p>
+          <div>
+            <div class="mb-2">
+              <a class="dropdown-item border-radius-md" href="javascript:;">
+                <div class="py-1 d-flex">
+                  <div class="">
+                    <a
+                        href="javascript:;"
+                        class="border-0 avatar avatar-sm rounded-circle me-3 bg-primary"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        style="font-weight: bolder;"
+                    >
+                      UU
+                    </a>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-1 text-sm font-weight-normal">
+                      <span class="font-weight-bold">Jhon</span> mengubah tanggal selesai pekerjaan
+                      <span class="font-weight-bold" style="color: #00A2B9;">Final Design Halaman Utama</span>
+                    </h6>
+                    <div class="card border-radius-sm bg-transparent" style="border: 0.3px solid grey;">
+                      <p class="mb-0 text-sm text-secondary mb-2 mt-2" style="margin-left: 10px; margin-right: 10px;">
+                        03 Agustus 2022 10:00 WIB &nbsp; <span class="text-dark" style="font-weight: bolder;"><i class="fas fa-arrow-right" /> &nbsp; 05 Agustus 2022</span>
+                      </p>
+                    </div>
+                    <p class="mb-0 mt-2 text-xs text-secondary">
+                      <i class="fa fa-clock me-1"></i>
+                      14 Jul 09:30 WIB
+                    </p>
+                  </div>
                 </div>
+              </a>
+            </div>
+            <div class="mb-2">
+              <a class="dropdown-item border-radius-md" href="javascript:;">
+                <div class="py-1 d-flex">
+                  <div class="">
+                    <a
+                        href="javascript:;"
+                        class="border-0 avatar avatar-sm rounded-circle me-3 bg-primary"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        style="font-weight: bolder;"
+                    >
+                      UU
+                    </a>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-1 text-sm font-weight-normal">
+                      <span class="font-weight-bold">Jhon</span> mengubah tanggal selesai pekerjaan
+                      <span class="font-weight-bold" style="color: #00A2B9;">Final Design Halaman Utama</span>
+                    </h6>
+                    <div class="card border-radius-sm bg-transparent" style="border: 0.3px solid grey;">
+                      <p class="mb-0 text-sm text-secondary mb-2 mt-2" style="margin-left: 10px; margin-right: 10px;">
+                        03 Agustus 2022 10:00 WIB &nbsp; <span class="text-dark" style="font-weight: bolder;"><i class="fas fa-arrow-right" /> &nbsp; 05 Agustus 2022</span>
+                      </p>
+                    </div>
+                    <p class="mb-0 mt-2 text-xs text-secondary">
+                      <i class="fa fa-clock me-1"></i>
+                      14 Jul 09:30 WIB
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <p class="mt-5">17 Agustus 2022</p>
+          <div>
+            <div class="mb-2">
+              <a class="dropdown-item border-radius-md" href="javascript:;">
+                <div class="py-1 d-flex">
+                  <div class="">
+                    <a
+                        href="javascript:;"
+                        class="border-0 avatar avatar-sm rounded-circle me-3 bg-primary"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        style="font-weight: bolder;"
+                    >
+                      UU
+                    </a>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-1 text-sm font-weight-normal">
+                      <span class="font-weight-bold">Jhon</span> mengubah tanggal selesai pekerjaan
+                      <span class="font-weight-bold" style="color: #00A2B9;">Final Design Halaman Utama</span>
+                    </h6>
+                    <div class="card border-radius-sm bg-transparent" style="border: 0.3px solid grey;">
+                      <p class="mb-0 text-sm text-secondary mb-2 mt-2" style="margin-left: 10px; margin-right: 10px;">
+                        03 Agustus 2022 10:00 WIB &nbsp; <span class="text-dark" style="font-weight: bolder;"><i class="fas fa-arrow-right" /> &nbsp; 05 Agustus 2022</span>
+                      </p>
+                    </div>
+                    <p class="mb-0 mt-2 text-xs text-secondary">
+                      <i class="fa fa-clock me-1"></i>
+                      14 Jul 09:30 WIB
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="mb-2">
+              <a class="dropdown-item border-radius-md" href="javascript:;">
+                <div class="py-1 d-flex">
+                  <div class="">
+                    <a
+                        href="javascript:;"
+                        class="border-0 avatar avatar-sm rounded-circle me-3 bg-primary"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        style="font-weight: bolder;"
+                    >
+                      UU
+                    </a>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-1 text-sm font-weight-normal">
+                      <span class="font-weight-bold">Jhon</span> mengubah tanggal selesai pekerjaan
+                      <span class="font-weight-bold" style="color: #00A2B9;">Final Design Halaman Utama</span>
+                    </h6>
+                    <div class="card border-radius-sm bg-transparent" style="border: 0.3px solid grey;">
+                      <p class="mb-0 text-sm text-secondary mb-2 mt-2" style="margin-left: 10px; margin-right: 10px;">
+                        03 Agustus 2022 10:00 WIB &nbsp; <span class="text-dark" style="font-weight: bolder;"><i class="fas fa-arrow-right" /> &nbsp; 05 Agustus 2022</span>
+                      </p>
+                    </div>
+                    <p class="mb-0 mt-2 text-xs text-secondary">
+                      <i class="fa fa-clock me-1"></i>
+                      14 Jul 09:30 WIB
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- modal -->
+        <div class="modal" id="modal-del-task">
+          <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+              <!-- modal header -->
+              <div class="modal-header-delete justify-content-end mt-4">
+                <i
+                    style="margin-top: -20px;"
+                    type="button"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    class="bi bi-x-lg"
+                ></i>
+              </div>
+              <!-- modal body -->
+              <div class="modal-body text-center">
+                <img src="../assets/img/icons/delpro.png">
+                <h3 class="mt-3"> Oops, Pekerjaan Ini Telah Dihapus.</h3>
+                <p>Kamu tidak dapat melihat detail pekerjaan yang telah dihapus.</p>
+              </div>
+              <div class="modal-footer-delete justify-content-center">
+                <button type="button" class="btn btn-primary w-35" data-bs-dismiss="modal">Oke</button>
               </div>
             </div>
           </div>
         </div>
+        <div class="modal" id="modal-del-kpi">
+          <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+              <!-- modal header -->
+              <div class="modal-header-delete justify-content-end mt-4">
+                <i
+                    style="margin-top: -20px;"
+                    type="button"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    class="bi bi-x-lg"
+                ></i>
+              </div>
+              <!-- modal body -->
+              <div class="modal-body text-center">
+                <img src="../assets/img/icons/delpro.png">
+                <h3 class="mt-3"> Oops, KPI / Project Ini Telah Dihapus.</h3>
+                <p>Kamu tidak dapat melihat detail KPI / Project yang telah dihapus.</p>
+              </div>
+              <div class="modal-footer-delete justify-content-center">
+                <button type="button" class="btn btn-primary w-35" data-bs-dismiss="modal">Oke</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </template>
+
 <script>
 export default {
-  data() {
-    return {
-      stateRiwayat: [
-        {
-          name: 'Jhon',
-          aktifitas: 'Komentar dalam',
-          name_pekerjaan: 'final design halaman utama',
-          tanggal: '14 juli',
-          jam: '09:30 WIB',
-          content_aktivitas_start: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-          content_aktivitas_end: ''
-        },
-        {
-          name: 'Jhon',
-          aktifitas: 'Komentar dalam',
-          name_pekerjaan: 'final design halaman utama',
-          tanggal: '14 juli',
-          jam: '09:30 WIB',
-          content_aktivitas_start: '3 Agustus 2022 10:00 WIB',
-          content_aktivitas_end: '5 Agustus 2022'
-        },
-        {
-          name: 'Jhon',
-          aktifitas: 'Komentar dalam',
-          name_pekerjaan: 'final design halaman utama',
-          tanggal: '14 juli',
-          jam: '09:30 WIB',
-          content_aktivitas_start: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
-          content_aktivitas_end: ''
-        },
-        {
-          name: 'Jhon',
-          aktifitas: 'Komentar dalam',
-          name_pekerjaan: 'final design halaman utama',
-          tanggal: '14 juli',
-          jam: '09:30 WIB',
-          content_aktivitas_start: '3 Agustus 2022 10:00 WIB',
-          content_aktivitas_end: '5 Agustus 2022'
-        },
-        {
-          name: 'Jhon',
-          aktifitas: 'Hapus Pekerjaan',
-          name_pekerjaan: 'final design halaman utama',
-          tanggal: '14 juli',
-          jam: '09:30 WIB',
-          content_aktivitas_start: '',
-          content_aktivitas_end: ''
-        },
-        {
-          name: 'Jhon',
-          aktifitas: 'Komentar dalam',
-          name_pekerjaan: 'final design halaman utama',
-          tanggal: '14 juli',
-          jam: '09:30 WIB',
-          content_aktivitas_start: '3 Agustus 2022 10:00 WIB',
-          content_aktivitas_end: '5 Agustus 2022'
-        },
-         {
-          name: 'Jhon',
-          aktifitas: 'Komentar dalam',
-          name_pekerjaan: 'final design halaman utama',
-          tanggal: '14 juli',
-          jam: '09:30 WIB',
-          content_aktivitas_start: '3 Agustus 2022 10:00 WIB',
-          content_aktivitas_end: '5 Agustus 2022'
-        }
-      ],
-    }
-  },
+  name: "RiwayatAktifitas"
 }
 </script>
+
 <style scoped>
 .scroll {
   max-height: 500px;

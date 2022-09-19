@@ -15,7 +15,7 @@
                       <h6>Riwayat Aktivitas</h6>
                       <span
                         @click="toDetailRiwayatActivity()"
-                        style="cursor:pointer;"
+                        style="cursor:pointer; font-size: 13px;"
                         class="text-primary"
                       >Lihat Semua</span>
                     </div>
