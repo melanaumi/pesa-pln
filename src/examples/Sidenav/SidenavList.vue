@@ -20,7 +20,7 @@
         <sidenav-item
           url="/project"
           :class="getRoute() === 'project' ? 'active' : ''"
-          :navText="'Project'"
+          :navText="'KPI / Project'"
         >
           <template v-slot:icon>
             <img
